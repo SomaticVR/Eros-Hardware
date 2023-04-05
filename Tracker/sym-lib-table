@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Eros Tracker")(type "KiCad")(uri "${KIPRJMOD}/Eros Tracker.kicad_sym")(options "")(descr ""))
+)

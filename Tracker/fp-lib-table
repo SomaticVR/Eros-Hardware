@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Eros Tracker")(type "KiCad")(uri "${KIPRJMOD}/Eros Tracker.pretty")(options "")(descr ""))
+)
