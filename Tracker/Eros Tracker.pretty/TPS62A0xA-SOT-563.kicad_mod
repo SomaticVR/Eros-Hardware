@@ -33,6 +33,8 @@
     (stroke (width 0.04826) (type solid)) (layer "Dwgs.User") (tstamp b9f06ae5-2a56-4382-b611-9d56ae3e3256))
   (fp_circle (center -1.59766 -0.59944) (end -1.59766 -0.6985)
     (stroke (width 0.19812) (type solid)) (fill none) (layer "Dwgs.User") (tstamp 3487680b-2962-4d0f-a4e8-6b658a36bb58))
+  (fp_rect (start -1.29 -1.07) (end 1.34 1.05)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.CrtYd") (tstamp a1d15b85-8e24-4ec9-97ce-fd00d839a396))
   (pad "1" smd rect (at -0.73406 -0.49784) (size 0.65786 0.30988) (layers "F.Cu" "F.Paste" "F.Mask")
     (thermal_bridge_angle 45) (tstamp f1025112-2a15-40c9-83b2-866395a31144))
   (pad "2" smd rect (at -0.73406 0) (size 0.65786 0.30988) (layers "F.Cu" "F.Paste" "F.Mask")
@@ -45,4 +47,9 @@
     (thermal_bridge_angle 45) (tstamp 06018bca-25fb-4bb3-a8e0-db54f679adbf))
   (pad "6" smd rect (at 0.73406 -0.49784) (size 0.65786 0.30988) (layers "F.Cu" "F.Paste" "F.Mask")
     (thermal_bridge_angle 45) (tstamp b3cb83b0-6c06-4ab0-8019-35b31e4edb78))
+  (model "${KIPRJMOD}/3DModels/TPS62A01ADRLR.stp"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
 )

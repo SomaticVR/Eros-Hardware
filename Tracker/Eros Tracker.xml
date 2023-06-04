@@ -1,0 +1,1787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\trkarl\Documents\Eros\Tracker\Eros Tracker.kicad_sch</source>
+    <date>5/22/2023 12:38:57 PM</date>
+    <tool>Eeschema (7.0.0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Eros Tracker.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Eros Tracker Microcontroller.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Eros Tracker Power - Battery.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Eros Tracker BNO086 IMU/" tstamps="/2a7cc5d7-0983-4896-a61d-6a51fe429227/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Eros Tracker BNO086 IMU.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Eros Tracker Connectors.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C6">
+      <value>0.1uF</value>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>121f5d56-a894-4b1c-8e71-ce0fe98d4d87</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>BAT54C</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.diodes.com/_files/datasheets/ds11005.pdf</datasheet>
+      <libsource lib="Diode" part="BAT54C" description="dual schottky barrier diode, common cathode"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="dual schottky barrier diode, common cathode"/>
+      <property name="ki_keywords" value="schottky diode common cathode"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>f907f5c2-526e-4569-93a1-9550579fd068</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>BOOT</value>
+      <libsource lib="Jumper" part="SolderJumper_2_Open" description="Solder Jumper, 2-pole, open"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Solder Jumper, 2-pole, open"/>
+      <property name="ki_keywords" value="solder jumper SPST"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>17f356e8-9176-4a0b-9827-6a4f35a7e5fe</tstamps>
+    </comp>
+    <comp ref="LED1">
+      <value>APDA3020LVBC_D</value>
+      <footprint>APDA3020LVBCD</footprint>
+      <datasheet>https://www.kingbrightusa.com/images/catalog/SPEC/APDA3020LVBC-D.pdf</datasheet>
+      <fields>
+        <field name="Height">3</field>
+        <field name="Manufacturer_Name">Kingbright</field>
+        <field name="Manufacturer_Part_Number">APDA3020LVBC/D</field>
+        <field name="Mouser Part Number">604-APDA3020LVBCD</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Kingbright/APDA3020LVBC-D?qs=6oMev5NRZMFciq4qGtzS9Q%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="APDA3020LVBC_D" description="Standard LEDs - SMD 3.0X2.0MM RA. BLUE SMD"/>
+      <property name="Height" value="3"/>
+      <property name="Mouser Part Number" value="604-APDA3020LVBCD"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Kingbright/APDA3020LVBC-D?qs=6oMev5NRZMFciq4qGtzS9Q%3D%3D"/>
+      <property name="Manufacturer_Name" value="Kingbright"/>
+      <property name="Manufacturer_Part_Number" value="APDA3020LVBC/D"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Standard LEDs - SMD 3.0X2.0MM RA. BLUE SMD"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>d6c8f6d2-e4ac-41bb-8163-99a656f05de2</tstamps>
+    </comp>
+    <comp ref="LED2">
+      <value>APDA3020LVBC_D</value>
+      <footprint>APDA3020LVBCD</footprint>
+      <datasheet>https://www.kingbrightusa.com/images/catalog/SPEC/APDA3020LVBC-D.pdf</datasheet>
+      <fields>
+        <field name="Height">3</field>
+        <field name="Manufacturer_Name">Kingbright</field>
+        <field name="Manufacturer_Part_Number">APDA3020LVBC/D</field>
+        <field name="Mouser Part Number">604-APDA3020LVBCD</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Kingbright/APDA3020LVBC-D?qs=6oMev5NRZMFciq4qGtzS9Q%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="APDA3020LVBC_D" description="Standard LEDs - SMD 3.0X2.0MM RA. BLUE SMD"/>
+      <property name="Height" value="3"/>
+      <property name="Mouser Part Number" value="604-APDA3020LVBCD"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Kingbright/APDA3020LVBC-D?qs=6oMev5NRZMFciq4qGtzS9Q%3D%3D"/>
+      <property name="Manufacturer_Name" value="Kingbright"/>
+      <property name="Manufacturer_Part_Number" value="APDA3020LVBC/D"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Standard LEDs - SMD 3.0X2.0MM RA. BLUE SMD"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>bc19cef4-416e-4bb9-8b8d-d8157a355d66</tstamps>
+    </comp>
+    <comp ref="LED3">
+      <value>APDA3020LVBC_D</value>
+      <footprint>APDA3020LVBCD</footprint>
+      <datasheet>https://www.kingbrightusa.com/images/catalog/SPEC/APDA3020LVBC-D.pdf</datasheet>
+      <fields>
+        <field name="Height">3</field>
+        <field name="Manufacturer_Name">Kingbright</field>
+        <field name="Manufacturer_Part_Number">APDA3020LVBC/D</field>
+        <field name="Mouser Part Number">604-APDA3020LVBCD</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Kingbright/APDA3020LVBC-D?qs=6oMev5NRZMFciq4qGtzS9Q%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="APDA3020LVBC_D" description="Standard LEDs - SMD 3.0X2.0MM RA. BLUE SMD"/>
+      <property name="Height" value="3"/>
+      <property name="Mouser Part Number" value="604-APDA3020LVBCD"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Kingbright/APDA3020LVBC-D?qs=6oMev5NRZMFciq4qGtzS9Q%3D%3D"/>
+      <property name="Manufacturer_Name" value="Kingbright"/>
+      <property name="Manufacturer_Part_Number" value="APDA3020LVBC/D"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Standard LEDs - SMD 3.0X2.0MM RA. BLUE SMD"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>787e3328-793c-4634-881e-e174cb617f0d</tstamps>
+    </comp>
+    <comp ref="M1">
+      <value>Motor_DC</value>
+      <libsource lib="Motor" part="Motor_DC" description="DC Motor"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="DC Motor"/>
+      <property name="ki_keywords" value="DC Motor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>284cc2a0-fa2a-45e7-9c9f-5befe4800f12</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>NX138BKSX</value>
+      <footprint>Eros Tracker:SOT65P210X110-6N</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/NX138BKS.pdf</datasheet>
+      <fields>
+        <field name="Height">1.1</field>
+        <field name="Manufacturer_Name">Nexperia</field>
+        <field name="Manufacturer_Part_Number">NX138BKSX</field>
+        <field name="Mouser Part Number">771-NX138BKSX</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Nexperia/NX138BKSX?qs=1fQ7IOp4WrgA%2FWbRCM6BQA%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="NX138BKSX" description="MOSFET NX138BKS/SOT363/SC-88"/>
+      <property name="Height" value="1.1"/>
+      <property name="Mouser Part Number" value="771-NX138BKSX"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Nexperia/NX138BKSX?qs=1fQ7IOp4WrgA%2FWbRCM6BQA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Nexperia"/>
+      <property name="Manufacturer_Part_Number" value="NX138BKSX"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="MOSFET NX138BKS/SOT363/SC-88"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>faaa8c04-5ad2-44a9-a1ae-fa967aa58ecb 34d6bbb8-e8be-4fce-a967-e23682be9de1</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>NX138BKSX</value>
+      <footprint>Eros Tracker:SOT65P210X110-6N</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/NX138BKS.pdf</datasheet>
+      <fields>
+        <field name="Height">1.1</field>
+        <field name="Manufacturer_Name">Nexperia</field>
+        <field name="Manufacturer_Part_Number">NX138BKSX</field>
+        <field name="Mouser Part Number">771-NX138BKSX</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Nexperia/NX138BKSX?qs=1fQ7IOp4WrgA%2FWbRCM6BQA%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="NX138BKSX" description="MOSFET NX138BKS/SOT363/SC-88"/>
+      <property name="Height" value="1.1"/>
+      <property name="Mouser Part Number" value="771-NX138BKSX"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Nexperia/NX138BKSX?qs=1fQ7IOp4WrgA%2FWbRCM6BQA%3D%3D"/>
+      <property name="Manufacturer_Name" value="Nexperia"/>
+      <property name="Manufacturer_Part_Number" value="NX138BKSX"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="MOSFET NX138BKS/SOT363/SC-88"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>ee579a42-ba2d-424b-8ed1-0c2d2e40e58d 762298d7-2d01-4da6-a21e-b054264143a9</tstamps>
+    </comp>
+    <comp ref="Q5">
+      <value>DMP31D7LDW-7</value>
+      <footprint>SOT65P210X110-6N</footprint>
+      <fields>
+        <field name="Height">1.1</field>
+        <field name="Manufacturer_Name">Diodes Inc.</field>
+        <field name="Manufacturer_Part_Number">DMP31D7LDW-7</field>
+        <field name="Mouser Part Number">621-DMP31D7LDW-7</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMP31D7LDW-7?qs=PzGy0jfpSMsBOiHgDjEvRQ%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="DMP31D7LDW-7" description="MOSFET MOSFET BVDSS: 25V 30V SOT363 T&amp;R 3K"/>
+      <property name="Height" value="1.1"/>
+      <property name="Mouser Part Number" value="621-DMP31D7LDW-7"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMP31D7LDW-7?qs=PzGy0jfpSMsBOiHgDjEvRQ%3D%3D"/>
+      <property name="Manufacturer_Name" value="Diodes Inc."/>
+      <property name="Manufacturer_Part_Number" value="DMP31D7LDW-7"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="MOSFET MOSFET BVDSS: 25V 30V SOT363 T&amp;R 3K"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>32b304c0-c87a-42b0-8b73-ed9dc26f21a9 30409570-83f1-4d9c-be6e-de4a08af254e</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>2.2k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>08112789-9cf5-4a4f-809b-222bd88bea75</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>10k 1%</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>3e0df1d3-62f0-4ac6-a457-022c9968397b</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>45k3 1%</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>a5939a1a-8a41-46f2-bef6-9a2d4b67345b</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>2.2k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>4b75997b-af3b-4ddb-82d3-8c355c88be4d</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>100k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>9731bc33-7cce-4d00-9a64-a33e18fd551e</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>100k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>03a8a4d7-4629-49c9-bd73-ba4583715298</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>22R</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>8648a7fe-2b7b-4c9f-afe3-31f9a6043d1b</tstamps>
+    </comp>
+    <comp ref="R21">
+      <value>10k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>b6625475-4246-4742-a518-0ba5cef76bc1</tstamps>
+    </comp>
+    <comp ref="R22">
+      <value>22R</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>aa4f6355-42c1-4b9b-9976-57e0d2eac25e</tstamps>
+    </comp>
+    <comp ref="R23">
+      <value>22R</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>fb0d9ad5-4086-49f1-9fab-e7869a6aeb98</tstamps>
+    </comp>
+    <comp ref="S1">
+      <value>EVQ-P7A01P</value>
+      <footprint>EVQP7J01P</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000C378.pdf</datasheet>
+      <fields>
+        <field name="Height">1</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">EVQ-P7A01P</field>
+        <field name="Mouser Part Number">667-EVQP7A01P</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Panasonic/EVQ-P7A01P?qs=rJ%252BziJWpysz7n3C20u6WAw%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="EVQ-P7A01P" description="Black Side Tactile Switch, Single Pole Single Throw (SPST) 50 mA @ 12 V dc 1.7mm"/>
+      <property name="Height" value="1"/>
+      <property name="Mouser Part Number" value="667-EVQP7A01P"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Panasonic/EVQ-P7A01P?qs=rJ%252BziJWpysz7n3C20u6WAw%3D%3D"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="EVQ-P7A01P"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Black Side Tactile Switch, Single Pole Single Throw (SPST) 50 mA @ 12 V dc 1.7mm"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>e994bee4-62d4-41f8-a140-e7e312233ea2</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>SW_SPST</value>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <property name="ki_description" value="Single Pole Single Throw (SPST) switch"/>
+      <property name="ki_keywords" value="switch lever"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>a010f671-a592-429b-a5fd-88db07541d1b</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ESP32-C3-WROOM-02-N4</value>
+      <footprint>Eros Tracker:MODULE_ESP32-C3-WROOM-02-H4</footprint>
+      <libsource lib="Eros Tracker" part="ESP32-C3-WROOM-02-N4" description=""/>
+      <property name="Sheetname" value="Eros Tracker Microcontroller"/>
+      <property name="Sheetfile" value="Eros Tracker Microcontroller.kicad_sch"/>
+      <sheetpath names="/Eros Tracker Microcontroller/" tstamps="/9c812c5a-2871-41e5-a7a0-ff8823ff9651/"/>
+      <tstamps>d48cb880-6a4e-4885-8f21-7527e4d59864</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>22uF</value>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>67160bad-ad48-4135-aa7c-3c8f46625c55</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>4.7uF</value>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>40a67856-3e71-4430-9e52-02c2fd38cfa9</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>SS34FA</value>
+      <footprint>SODFL3618X143N</footprint>
+      <datasheet>http://www.onsemi.com/pub/Collateral/SS36FA-D.pdf</datasheet>
+      <fields>
+        <field name="Height">1.43</field>
+        <field name="Manufacturer_Name">onsemi</field>
+        <field name="Manufacturer_Part_Number">SS34FA</field>
+        <field name="Mouser Part Number">512-SS34FA</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/SS34FA?qs=R26iFe%2FkX%2FK1QUwZdCmBBw%3D%3D</field>
+      </fields>
+      <libsource lib="" part="SS34FA_1" description="ON SEMICONDUCTOR - SS34FA - SCHOTTKY RECT, AEC-Q101, 40V, SOD-123FA"/>
+      <property name="Height" value="1.43"/>
+      <property name="Mouser Part Number" value="512-SS34FA"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/SS34FA?qs=R26iFe%2FkX%2FK1QUwZdCmBBw%3D%3D"/>
+      <property name="Manufacturer_Name" value="onsemi"/>
+      <property name="Manufacturer_Part_Number" value="SS34FA"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="ON SEMICONDUCTOR - SS34FA - SCHOTTKY RECT, AEC-Q101, 40V, SOD-123FA"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>69a55589-3eba-4ea0-b486-3555b47fa76e</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>1uH</value>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Inductor"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>6d77d005-db88-445e-b932-d5019dd3995a</tstamps>
+    </comp>
+    <comp ref="Q4">
+      <value>DMC1028UVT-7</value>
+      <footprint>SOT95P280X100-6N</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/DMC1028UVT.pdf</datasheet>
+      <fields>
+        <field name="Height">1</field>
+        <field name="Manufacturer_Name">Diodes Inc.</field>
+        <field name="Manufacturer_Part_Number">DMC1028UVT-7</field>
+        <field name="Mouser Part Number">621-DMC1028UVT-7</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMC1028UVT-7?qs=OTrKUuiFdkZYi%2FbpWRju2g%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="DMC1028UVT-7" description="MOSFET MOSFET BVDSS: 8V 24V TSOT26 T&amp;R 3K"/>
+      <property name="Height" value="1"/>
+      <property name="Mouser Part Number" value="621-DMC1028UVT-7"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMC1028UVT-7?qs=OTrKUuiFdkZYi%2FbpWRju2g%3D%3D"/>
+      <property name="Manufacturer_Name" value="Diodes Inc."/>
+      <property name="Manufacturer_Part_Number" value="DMC1028UVT-7"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="MOSFET MOSFET BVDSS: 8V 24V TSOT26 T&amp;R 3K"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>c78836c4-ca15-4c20-9a97-641d9ee96d8b 47df49cb-ea47-40c6-bea7-cb8a3aa00a42</tstamps>
+    </comp>
+    <comp ref="Q6">
+      <value>DMC1028UVT-7</value>
+      <footprint>SOT95P280X100-6N</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/DMC1028UVT.pdf</datasheet>
+      <fields>
+        <field name="Height">1</field>
+        <field name="Manufacturer_Name">Diodes Inc.</field>
+        <field name="Manufacturer_Part_Number">DMC1028UVT-7</field>
+        <field name="Mouser Part Number">621-DMC1028UVT-7</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMC1028UVT-7?qs=OTrKUuiFdkZYi%2FbpWRju2g%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="DMC1028UVT-7" description="MOSFET MOSFET BVDSS: 8V 24V TSOT26 T&amp;R 3K"/>
+      <property name="Height" value="1"/>
+      <property name="Mouser Part Number" value="621-DMC1028UVT-7"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMC1028UVT-7?qs=OTrKUuiFdkZYi%2FbpWRju2g%3D%3D"/>
+      <property name="Manufacturer_Name" value="Diodes Inc."/>
+      <property name="Manufacturer_Part_Number" value="DMC1028UVT-7"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="MOSFET MOSFET BVDSS: 8V 24V TSOT26 T&amp;R 3K"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>c3cd2736-467a-49f9-95ab-e23c75ba1970 4d450a6a-20c3-4e61-ae5e-42a1f923e560</tstamps>
+    </comp>
+    <comp ref="Q7">
+      <value>DMP2240UDM-7</value>
+      <footprint>SOT95P285X140-6N</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds31197.pdf</datasheet>
+      <fields>
+        <field name="Height">1.4</field>
+        <field name="Manufacturer_Name">Diodes Inc.</field>
+        <field name="Manufacturer_Part_Number">DMP2240UDM-7</field>
+        <field name="Mouser Part Number">621-DMP2240UDM-7</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMP2240UDM-7?qs=mno522deGfakW12JLK9H1A%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="DMP2240UDM-7" description="Diodes Inc DMP2240UDM-7 Dual P-channel MOSFET Transistor, 2 A, -20 V, 6-Pin SOT-26"/>
+      <property name="Height" value="1.4"/>
+      <property name="Mouser Part Number" value="621-DMP2240UDM-7"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMP2240UDM-7?qs=mno522deGfakW12JLK9H1A%3D%3D"/>
+      <property name="Manufacturer_Name" value="Diodes Inc."/>
+      <property name="Manufacturer_Part_Number" value="DMP2240UDM-7"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Diodes Inc DMP2240UDM-7 Dual P-channel MOSFET Transistor, 2 A, -20 V, 6-Pin SOT-26"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>c28426bf-640f-4573-84cb-16000681a234 62ae9bc4-d7dd-471f-9966-2ef6a5038669</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>35334927-1346-4e41-a914-07281805693e</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>551a7a9f-77ae-4e9c-b38a-78e8476eae35</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>833</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>06c8ad11-ff0a-4f24-b273-e7bac8e7a067</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>486c6b97-4d79-4b92-a0ff-5d297e97f9c6</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>45k3 1%</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>889ac7ee-dbb3-4a57-a00a-5cf837388c1b</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10k 1%</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>99d0004d-212e-4434-acfb-d331e6757993</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>10k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>8c6f647d-6e13-4dce-a4c8-3676b33674f5</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>10k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>c5bc99c4-d5cb-4e66-9d1c-b2e1ad3f4c6d</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>TPS62A01A</value>
+      <footprint>Eros Tracker:SOT-563</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps62a02a.pdf</datasheet>
+      <libsource lib="Eros Tracker" part="TPS62A01A" description="1-A High-Efficiency Synchronous Buck Converter"/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <property name="ki_description" value="1-A High-Efficiency Synchronous Buck Converter"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>9bdd96d4-02b7-413a-8803-5d3a3f4bc073</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>MCP73834-FCI/MF</value>
+      <footprint>DFN10_3x3MC_MCH</footprint>
+      <datasheet>https://ww1.microchip.com/downloads/en/DeviceDoc/22005b.pdf</datasheet>
+      <libsource lib="Eros Tracker" part="MCP73834-FCI/MF" description=""/>
+      <property name="Sheetname" value="Eros Tracker Power &amp; Battery"/>
+      <property name="Sheetfile" value="Eros Tracker Power - Battery.kicad_sch"/>
+      <sheetpath names="/Eros Tracker Power &amp; Battery/" tstamps="/576653f3-b0de-4b89-84c9-67e946662380/"/>
+      <tstamps>30aaa11d-2ff7-4544-b0b7-d53337bce2f0</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>0.1uF</value>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Eros Tracker BNO086 IMU"/>
+      <property name="Sheetfile" value="Eros Tracker BNO086 IMU.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Eros Tracker BNO086 IMU/" tstamps="/2a7cc5d7-0983-4896-a61d-6a51fe429227/"/>
+      <tstamps>c32971ec-a47b-4c56-8af6-caf9a716714f</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>0.1uF</value>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Eros Tracker BNO086 IMU"/>
+      <property name="Sheetfile" value="Eros Tracker BNO086 IMU.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Eros Tracker BNO086 IMU/" tstamps="/2a7cc5d7-0983-4896-a61d-6a51fe429227/"/>
+      <tstamps>14fe6b6b-af59-4650-bd4a-74f4f73297ca</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>0.1uF</value>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Eros Tracker BNO086 IMU"/>
+      <property name="Sheetfile" value="Eros Tracker BNO086 IMU.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Eros Tracker BNO086 IMU/" tstamps="/2a7cc5d7-0983-4896-a61d-6a51fe429227/"/>
+      <tstamps>4757ca39-c833-487e-b3e8-2cee1477f427</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>10k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker BNO086 IMU"/>
+      <property name="Sheetfile" value="Eros Tracker BNO086 IMU.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker BNO086 IMU/" tstamps="/2a7cc5d7-0983-4896-a61d-6a51fe429227/"/>
+      <tstamps>c9f7fcb1-32e4-49f1-ab01-eb6ba3825d5f</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>2.2k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker BNO086 IMU"/>
+      <property name="Sheetfile" value="Eros Tracker BNO086 IMU.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker BNO086 IMU/" tstamps="/2a7cc5d7-0983-4896-a61d-6a51fe429227/"/>
+      <tstamps>0f4f0ac4-824b-422b-a73f-324df2266644</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>2.2k</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker BNO086 IMU"/>
+      <property name="Sheetfile" value="Eros Tracker BNO086 IMU.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker BNO086 IMU/" tstamps="/2a7cc5d7-0983-4896-a61d-6a51fe429227/"/>
+      <tstamps>cd8c6981-e177-4f18-8a9a-806314d34325</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>BNO086</value>
+      <footprint>Package_LGA:LGA-28_5.2x3.8mm_P0.5mm</footprint>
+      <datasheet>https://www.ceva-dsp.com/wp-content/uploads/2019/10/BNO080_085-Datasheet.pdf</datasheet>
+      <libsource lib="Eros Tracker" part="BNO086" description="Intelligent 9-axis absolute orientation sensor, LGA-28"/>
+      <property name="Sheetname" value="Eros Tracker BNO086 IMU"/>
+      <property name="Sheetfile" value="Eros Tracker BNO086 IMU.kicad_sch"/>
+      <property name="ki_description" value="Intelligent 9-axis absolute orientation sensor, LGA-28"/>
+      <property name="ki_keywords" value="IMU Sensor Fusion I2C UART"/>
+      <sheetpath names="/Eros Tracker BNO086 IMU/" tstamps="/2a7cc5d7-0983-4896-a61d-6a51fe429227/"/>
+      <tstamps>2ca0dbb2-89cc-494c-9c65-ab4a90020efd</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>2171790001</value>
+      <footprint>2171790001_MOL</footprint>
+      <datasheet>https://www.molex.com/webdocs/datasheets/pdf/en-us/2171790001_IO_CONNECTORS.pdf</datasheet>
+      <libsource lib="Eros Tracker" part="2171790001" description=""/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <property name="ki_keywords" value="2171790001"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>d4bad094-f175-4657-a0b6-7a10e676d94e</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>S2B-PH-K-SLFSN</value>
+      <footprint>Eros Tracker:S2BPHSM4TBLFSN</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/ePH.pdf</datasheet>
+      <fields>
+        <field name="Height">6.6</field>
+        <field name="Manufacturer_Name">JST (JAPAN SOLDERLESS TERMINALS)</field>
+        <field name="Manufacturer_Part_Number">S2B-PH-SM4-TB(LF)(SN)</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="S2B-PH-SM4-TB_LF__SN_" description="Conn Shrouded Header (4 Sides) HDR 2 POS 2mm Solder RA Side Entry SMD T/R"/>
+      <property name="Height" value="6.6"/>
+      <property name="Future Part Number" value=""/>
+      <property name="Future Price/Stock" value=""/>
+      <property name="Manufacturer_Name" value="JST (JAPAN SOLDERLESS TERMINALS)"/>
+      <property name="Manufacturer_Part_Number" value="S2B-PH-SM4-TB(LF)(SN)"/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <property name="ki_description" value="Conn Shrouded Header (4 Sides) HDR 2 POS 2mm Solder RA Side Entry SMD T/R"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>22109dfa-38c9-4436-8fbe-56d310333959</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>S8B-PH-K-S LFSN</value>
+      <footprint>Eros Tracker:S8BPHSM4TBLFSN</footprint>
+      <datasheet>https://www.digikey.com/product-detail/en/jst-sales-america-inc/S8B-PH-SM4-TB-LF-SN/455-1755-1-ND/926852</datasheet>
+      <fields>
+        <field name="Height">5.5</field>
+        <field name="Manufacturer_Name">JST (JAPAN SOLDERLESS TERMINALS)</field>
+        <field name="Manufacturer_Part_Number">S8B-PH-SM4-TB(LF)(SN)</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="S8B-PH-SM4-TB_LF__SN_" description="Conn Shrouded Header (4 Sides) HDR 8 POS 2mm Solder RA Side Entry SMD T/R"/>
+      <property name="Height" value="5.5"/>
+      <property name="Future Part Number" value=""/>
+      <property name="Future Price/Stock" value=""/>
+      <property name="Manufacturer_Name" value="JST (JAPAN SOLDERLESS TERMINALS)"/>
+      <property name="Manufacturer_Part_Number" value="S8B-PH-SM4-TB(LF)(SN)"/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <property name="ki_description" value="Conn Shrouded Header (4 Sides) HDR 8 POS 2mm Solder RA Side Entry SMD T/R"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>5582f5d2-8292-4521-a23a-8dc44e9d37cf</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>24881</value>
+      <footprint>Eros Tracker:2488x-NPTH</footprint>
+      <datasheet>https://www.keyelco.com/product-pdf.cfm?p=14492</datasheet>
+      <fields>
+        <field name="Height">8.13</field>
+        <field name="Manufacturer_Name">Keystone Electronics</field>
+        <field name="Manufacturer_Part_Number">24881</field>
+        <field name="Mouser Part Number">534-24881</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/24885?qs=u16ybLDytRauJq9rQZt4xg%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="24881" description="Standoffs &amp; Spacers SM Standoff Steel 375 pcs per reel"/>
+      <property name="Height" value="8.13"/>
+      <property name="Mouser Part Number" value="534-24881"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/24885?qs=u16ybLDytRauJq9rQZt4xg%3D%3D"/>
+      <property name="Manufacturer_Name" value="Keystone Electronics"/>
+      <property name="Manufacturer_Part_Number" value="24881"/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <property name="ki_description" value="Standoffs &amp; Spacers SM Standoff Steel 375 pcs per reel"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>9575ba56-08f6-4d56-b786-e07f2b325589</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>24881</value>
+      <footprint>Eros Tracker:2488x-NPTH</footprint>
+      <datasheet>https://www.keyelco.com/product-pdf.cfm?p=14492</datasheet>
+      <fields>
+        <field name="Height">8.13</field>
+        <field name="Manufacturer_Name">Keystone Electronics</field>
+        <field name="Manufacturer_Part_Number">24881</field>
+        <field name="Mouser Part Number">534-24881</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/24885?qs=u16ybLDytRauJq9rQZt4xg%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="24881" description="Standoffs &amp; Spacers SM Standoff Steel 375 pcs per reel"/>
+      <property name="Height" value="8.13"/>
+      <property name="Mouser Part Number" value="534-24881"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/24885?qs=u16ybLDytRauJq9rQZt4xg%3D%3D"/>
+      <property name="Manufacturer_Name" value="Keystone Electronics"/>
+      <property name="Manufacturer_Part_Number" value="24881"/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <property name="ki_description" value="Standoffs &amp; Spacers SM Standoff Steel 375 pcs per reel"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>df15a073-97a3-44a4-9e1b-bce98a03911d</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>24881</value>
+      <footprint>Eros Tracker:2488x-NPTH</footprint>
+      <datasheet>https://www.keyelco.com/product-pdf.cfm?p=14492</datasheet>
+      <fields>
+        <field name="Height">8.13</field>
+        <field name="Manufacturer_Name">Keystone Electronics</field>
+        <field name="Manufacturer_Part_Number">24881</field>
+        <field name="Mouser Part Number">534-24881</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/24885?qs=u16ybLDytRauJq9rQZt4xg%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="24881" description="Standoffs &amp; Spacers SM Standoff Steel 375 pcs per reel"/>
+      <property name="Height" value="8.13"/>
+      <property name="Mouser Part Number" value="534-24881"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/24885?qs=u16ybLDytRauJq9rQZt4xg%3D%3D"/>
+      <property name="Manufacturer_Name" value="Keystone Electronics"/>
+      <property name="Manufacturer_Part_Number" value="24881"/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <property name="ki_description" value="Standoffs &amp; Spacers SM Standoff Steel 375 pcs per reel"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>5e1fb098-3cd6-47f0-a860-7df3113d0a4f</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>24881</value>
+      <footprint>Eros Tracker:2488x-NPTH</footprint>
+      <datasheet>https://www.keyelco.com/product-pdf.cfm?p=14492</datasheet>
+      <fields>
+        <field name="Height">8.13</field>
+        <field name="Manufacturer_Name">Keystone Electronics</field>
+        <field name="Manufacturer_Part_Number">24881</field>
+        <field name="Mouser Part Number">534-24881</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/24885?qs=u16ybLDytRauJq9rQZt4xg%3D%3D</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="24881" description="Standoffs &amp; Spacers SM Standoff Steel 375 pcs per reel"/>
+      <property name="Height" value="8.13"/>
+      <property name="Mouser Part Number" value="534-24881"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/24885?qs=u16ybLDytRauJq9rQZt4xg%3D%3D"/>
+      <property name="Manufacturer_Name" value="Keystone Electronics"/>
+      <property name="Manufacturer_Part_Number" value="24881"/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <property name="ki_description" value="Standoffs &amp; Spacers SM Standoff Steel 375 pcs per reel"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>bb5c0ae2-4cf4-45c5-9b2d-e117eed0e279</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>~</value>
+      <footprint>Eros Tracker:10mmDisc</footprint>
+      <fields>
+        <field name="Link">https://totalelement.com/collections/steel-discs/products/3-8-inch-steel-disc-blank-metal-strike-plates-250-pack</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="Power_Pad" description=""/>
+      <property name="Link" value="https://totalelement.com/collections/steel-discs/products/3-8-inch-steel-disc-blank-metal-strike-plates-250-pack"/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>21166442-f16d-4b00-905b-c0dadd9a9189</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>~</value>
+      <footprint>Eros Tracker:10mmDisc</footprint>
+      <fields>
+        <field name="link">https://totalelement.com/collections/steel-discs/products/3-8-inch-steel-disc-blank-metal-strike-plates-250-pack</field>
+      </fields>
+      <libsource lib="Eros Tracker" part="Power_Pad" description=""/>
+      <property name="link" value="https://totalelement.com/collections/steel-discs/products/3-8-inch-steel-disc-blank-metal-strike-plates-250-pack"/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>71f0c5e3-9787-4426-905a-86b78fbb8558</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>5k1</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>e0d0dd2b-803b-46e1-9936-c2784ba5af78</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>5k1</value>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Sheetname" value="Eros Tracker Connectors"/>
+      <property name="Sheetfile" value="Eros Tracker Connectors.kicad_sch"/>
+      <property name="ki_description" value="Resistor, US symbol"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Eros Tracker Connectors/" tstamps="/d48b8e2f-8217-4d86-802f-6eb46ffa5237/"/>
+      <tstamps>24391693-065d-451e-84ad-2fe126db8430</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="" part="SS34FA_1">
+      <description>ON SEMICONDUCTOR - SS34FA - SCHOTTKY RECT, AEC-Q101, 40V, SOD-123FA</description>
+      <docs>http://www.onsemi.com/pub/Collateral/SS36FA-D.pdf</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SS34FA</field>
+        <field name="Footprint">SODFL3618X143N</field>
+        <field name="Datasheet">http://www.onsemi.com/pub/Collateral/SS36FA-D.pdf</field>
+        <field name="Height">1.43</field>
+        <field name="Mouser Part Number">512-SS34FA</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/SS34FA?qs=R26iFe%2FkX%2FK1QUwZdCmBBw%3D%3D</field>
+        <field name="Manufacturer_Name">onsemi</field>
+        <field name="Manufacturer_Part_Number">SS34FA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_US">
+      <description>Resistor, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="BAT54C">
+      <description>dual schottky barrier diode, common cathode</description>
+      <docs>http://www.diodes.com/_files/datasheets/ds11005.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">BAT54C</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">http://www.diodes.com/_files/datasheets/ds11005.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="2171790001">
+      <docs>https://www.molex.com/webdocs/datasheets/pdf/en-us/2171790001_IO_CONNECTORS.pdf</docs>
+      <footprints>
+        <fp>2171790001_MOL</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">2171790001</field>
+        <field name="Footprint">2171790001_MOL</field>
+        <field name="Datasheet">https://www.molex.com/webdocs/datasheets/pdf/en-us/2171790001_IO_CONNECTORS.pdf</field>
+      </fields>
+      <pins>
+        <pin num="A1/B12" name="GND" type="power_out"/>
+        <pin num="A4/B9" name="VBUS" type="power_in"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="DP1" type="bidirectional"/>
+        <pin num="A7" name="DN1" type="bidirectional"/>
+        <pin num="A8" name="SBU1" type="bidirectional"/>
+        <pin num="B1/A12" name="GND" type="power_out"/>
+        <pin num="B4/A9" name="VBUS" type="power_in"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="DP2" type="bidirectional"/>
+        <pin num="B7" name="DN2" type="bidirectional"/>
+        <pin num="B8" name="SBU2" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="24881">
+      <description>Standoffs &amp; Spacers SM Standoff Steel 375 pcs per reel</description>
+      <docs>https://www.keyelco.com/product-pdf.cfm?p=14492</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">24881</field>
+        <field name="Footprint">Eros Tracker:2488x-NPTH</field>
+        <field name="Datasheet">https://www.keyelco.com/product-pdf.cfm?p=14492</field>
+        <field name="Height">8.13</field>
+        <field name="Mouser Part Number">534-24881</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/24885?qs=u16ybLDytRauJq9rQZt4xg%3D%3D</field>
+        <field name="Manufacturer_Name">Keystone Electronics</field>
+        <field name="Manufacturer_Part_Number">24881</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="APDA3020LVBC_D">
+      <description>Standard LEDs - SMD 3.0X2.0MM RA. BLUE SMD</description>
+      <docs>https://www.kingbrightusa.com/images/catalog/SPEC/APDA3020LVBC-D.pdf</docs>
+      <fields>
+        <field name="Reference">LED</field>
+        <field name="Value">APDA3020LVBC_D</field>
+        <field name="Footprint">APDA3020LVBCD</field>
+        <field name="Datasheet">https://www.kingbrightusa.com/images/catalog/SPEC/APDA3020LVBC-D.pdf</field>
+        <field name="Height">3</field>
+        <field name="Mouser Part Number">604-APDA3020LVBCD</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Kingbright/APDA3020LVBC-D?qs=6oMev5NRZMFciq4qGtzS9Q%3D%3D</field>
+        <field name="Manufacturer_Name">Kingbright</field>
+        <field name="Manufacturer_Part_Number">APDA3020LVBC/D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="BNO086">
+      <description>Intelligent 9-axis absolute orientation sensor, LGA-28</description>
+      <docs>https://www.ceva-dsp.com/wp-content/uploads/2019/10/BNO080_085-Datasheet.pdf</docs>
+      <footprints>
+        <fp>LGA*5.2x3.8mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U?</field>
+        <field name="Value">BNO086</field>
+        <field name="Footprint">Package_LGA:LGA-28_5.2x3.8mm_P0.5mm</field>
+        <field name="Datasheet">https://www.ceva-dsp.com/wp-content/uploads/2019/10/BNO080_085-Datasheet.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PIN1" type="no_connect"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VDD" type="power_in"/>
+        <pin num="4" name="~{BOOTN}" type="input"/>
+        <pin num="5" name="PS1" type="input"/>
+        <pin num="6" name="PS0/WAKE" type="input"/>
+        <pin num="7" name="PIN7" type="no_connect"/>
+        <pin num="8" name="PIN8" type="no_connect"/>
+        <pin num="9" name="CAP" type="passive"/>
+        <pin num="10" name="CLKSEL0" type="input"/>
+        <pin num="11" name="~{RESET}" type="input"/>
+        <pin num="12" name="PIN12" type="no_connect"/>
+        <pin num="13" name="PIN13" type="no_connect"/>
+        <pin num="14" name="~{H_INT}" type="output"/>
+        <pin num="15" name="ENV_SCL" type="bidirectional"/>
+        <pin num="16" name="ENV_SDA" type="bidirectional"/>
+        <pin num="17" name="SA0/H_COPI" type="input"/>
+        <pin num="18" name="~{H_CS}" type="passive"/>
+        <pin num="19" name="H_SCL/SCK/RX" type="bidirectional"/>
+        <pin num="20" name="H_SDA/H_CIPO/TX" type="bidirectional"/>
+        <pin num="21" name="PIN21" type="no_connect"/>
+        <pin num="22" name="PIN22" type="no_connect"/>
+        <pin num="23" name="PIN23" type="no_connect"/>
+        <pin num="24" name="PIN24" type="no_connect"/>
+        <pin num="25" name="GNDIO" type="power_in"/>
+        <pin num="26" name="XOUT32" type="output"/>
+        <pin num="27" name="XIN32" type="input"/>
+        <pin num="28" name="VDDIO" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="DMC1028UVT-7">
+      <description>MOSFET MOSFET BVDSS: 8V 24V TSOT26 T&amp;R 3K</description>
+      <docs>https://www.diodes.com/assets/Datasheets/DMC1028UVT.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">DMC1028UVT-7</field>
+        <field name="Footprint">SOT95P280X100-6N</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/DMC1028UVT.pdf</field>
+        <field name="Height">1</field>
+        <field name="Mouser Part Number">621-DMC1028UVT-7</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMC1028UVT-7?qs=OTrKUuiFdkZYi%2FbpWRju2g%3D%3D</field>
+        <field name="Manufacturer_Name">Diodes Inc.</field>
+        <field name="Manufacturer_Part_Number">DMC1028UVT-7</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G1" type="input"/>
+        <pin num="2" name="S2" type="passive"/>
+        <pin num="3" name="G2" type="input"/>
+        <pin num="4" name="D2" type="passive"/>
+        <pin num="5" name="S1" type="passive"/>
+        <pin num="6" name="D1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="DMP2240UDM-7">
+      <description>Diodes Inc DMP2240UDM-7 Dual P-channel MOSFET Transistor, 2 A, -20 V, 6-Pin SOT-26</description>
+      <docs>https://www.diodes.com/assets/Datasheets/ds31197.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">DMP2240UDM-7</field>
+        <field name="Footprint">SOT95P285X140-6N</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/ds31197.pdf</field>
+        <field name="Height">1.4</field>
+        <field name="Mouser Part Number">621-DMP2240UDM-7</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMP2240UDM-7?qs=mno522deGfakW12JLK9H1A%3D%3D</field>
+        <field name="Manufacturer_Name">Diodes Inc.</field>
+        <field name="Manufacturer_Part_Number">DMP2240UDM-7</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G1" type="passive"/>
+        <pin num="2" name="S2" type="passive"/>
+        <pin num="3" name="G2" type="passive"/>
+        <pin num="4" name="D2" type="passive"/>
+        <pin num="5" name="S1" type="passive"/>
+        <pin num="6" name="D1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="DMP31D7LDW-7">
+      <description>MOSFET MOSFET BVDSS: 25V 30V SOT363 T&amp;R 3K</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">DMP31D7LDW-7</field>
+        <field name="Footprint">SOT65P210X110-6N</field>
+        <field name="Height">1.1</field>
+        <field name="Mouser Part Number">621-DMP31D7LDW-7</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMP31D7LDW-7?qs=PzGy0jfpSMsBOiHgDjEvRQ%3D%3D</field>
+        <field name="Manufacturer_Name">Diodes Inc.</field>
+        <field name="Manufacturer_Part_Number">DMP31D7LDW-7</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S1" type="passive"/>
+        <pin num="2" name="G1" type="passive"/>
+        <pin num="3" name="D2" type="passive"/>
+        <pin num="4" name="S2" type="passive"/>
+        <pin num="5" name="G2" type="passive"/>
+        <pin num="6" name="D1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="ESP32-C3-WROOM-02-N4">
+      <fields>
+        <field name="Reference">U?</field>
+        <field name="Value">ESP32-C3-WROOM-02-N4</field>
+        <field name="Footprint">Eros Tracker:MODULE_ESP32-C3-WROOM-02-H4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="power_in"/>
+        <pin num="2" name="EN" type="input"/>
+        <pin num="3" name="IO4" type="bidirectional"/>
+        <pin num="4" name="IO5" type="bidirectional"/>
+        <pin num="5" name="IO6" type="bidirectional"/>
+        <pin num="6" name="IO7" type="bidirectional"/>
+        <pin num="7" name="IO8" type="bidirectional"/>
+        <pin num="8" name="IO9" type="bidirectional"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="IO10" type="bidirectional"/>
+        <pin num="11" name="RXD" type="bidirectional"/>
+        <pin num="12" name="TXD" type="bidirectional"/>
+        <pin num="13" name="IO18" type="bidirectional"/>
+        <pin num="14" name="IO19" type="bidirectional"/>
+        <pin num="15" name="IO3" type="bidirectional"/>
+        <pin num="16" name="IO2" type="bidirectional"/>
+        <pin num="17" name="IO1" type="bidirectional"/>
+        <pin num="18" name="IO0" type="bidirectional"/>
+        <pin num="19" name="GND" type="power_in"/>
+        <pin num="20" name="GND" type="power_in"/>
+        <pin num="21" name="GND" type="power_in"/>
+        <pin num="22" name="GND" type="power_in"/>
+        <pin num="23" name="GND" type="power_in"/>
+        <pin num="24" name="GND" type="power_in"/>
+        <pin num="25" name="GND" type="power_in"/>
+        <pin num="26" name="GND" type="power_in"/>
+        <pin num="27" name="GND" type="power_in"/>
+        <pin num="28" name="GND" type="power_in"/>
+        <pin num="29" name="GND" type="power_in"/>
+        <pin num="30" name="GND" type="power_in"/>
+        <pin num="31" name="GND" type="power_in"/>
+        <pin num="32" name="GND" type="power_in"/>
+        <pin num="33" name="GND" type="power_in"/>
+        <pin num="34" name="GND" type="power_in"/>
+        <pin num="35" name="GND" type="power_in"/>
+        <pin num="36" name="GND" type="power_in"/>
+        <pin num="37" name="GND" type="power_in"/>
+        <pin num="38" name="GND" type="power_in"/>
+        <pin num="39" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="EVQ-P7A01P">
+      <description>Black Side Tactile Switch, Single Pole Single Throw (SPST) 50 mA @ 12 V dc 1.7mm</description>
+      <docs>https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000C378.pdf</docs>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">EVQ-P7A01P</field>
+        <field name="Footprint">EVQP7J01P</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000C378.pdf</field>
+        <field name="Height">1</field>
+        <field name="Mouser Part Number">667-EVQP7A01P</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Panasonic/EVQ-P7A01P?qs=rJ%252BziJWpysz7n3C20u6WAw%3D%3D</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">EVQ-P7A01P</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NO_1" type="passive"/>
+        <pin num="2" name="NO_2" type="passive"/>
+        <pin num="3" name="COM_1" type="passive"/>
+        <pin num="4" name="COM_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="MCP73834-FCI/MF">
+      <docs>https://ww1.microchip.com/downloads/en/DeviceDoc/22005b.pdf</docs>
+      <footprints>
+        <fp>DFN10_3x3MC_MCH</fp>
+        <fp>DFN10_3x3MC_MCH-M</fp>
+        <fp>DFN10_3x3MC_MCH-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP73834-FCI/MF</field>
+        <field name="Footprint">DFN10_3x3MC_MCH</field>
+        <field name="Datasheet">https://ww1.microchip.com/downloads/en/DeviceDoc/22005b.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="unspecified"/>
+        <pin num="2" name="VDD" type="unspecified"/>
+        <pin num="3" name="STAT1" type="unspecified"/>
+        <pin num="4" name="STAT2" type="unspecified"/>
+        <pin num="5" name="VSS" type="unspecified"/>
+        <pin num="6" name="PROG" type="unspecified"/>
+        <pin num="7" name="*TE" type="unspecified"/>
+        <pin num="8" name="THERM" type="unspecified"/>
+        <pin num="9" name="VBAT" type="unspecified"/>
+        <pin num="10" name="VBAT" type="unspecified"/>
+        <pin num="11" name="EP" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="NX138BKSX">
+      <description>MOSFET NX138BKS/SOT363/SC-88</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/NX138BKS.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">NX138BKSX</field>
+        <field name="Footprint">Eros Tracker:SOT65P210X110-6N</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/NX138BKS.pdf</field>
+        <field name="Height">1.1</field>
+        <field name="Mouser Part Number">771-NX138BKSX</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Nexperia/NX138BKSX?qs=1fQ7IOp4WrgA%2FWbRCM6BQA%3D%3D</field>
+        <field name="Manufacturer_Name">Nexperia</field>
+        <field name="Manufacturer_Part_Number">NX138BKSX</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S1" type="passive"/>
+        <pin num="2" name="G1" type="input"/>
+        <pin num="3" name="D2" type="passive"/>
+        <pin num="4" name="S2" type="passive"/>
+        <pin num="5" name="G2" type="input"/>
+        <pin num="6" name="D1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="Power_Pad">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Footprint">Eros Tracker:10mmDisc</field>
+      </fields>
+      <pins>
+        <pin num="" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="S2B-PH-SM4-TB_LF__SN_">
+      <description>Conn Shrouded Header (4 Sides) HDR 2 POS 2mm Solder RA Side Entry SMD T/R</description>
+      <docs>https://www.jst-mfg.com/product/pdf/eng/ePH.pdf</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">S2B-PH-SM4-TB_LF__SN_</field>
+        <field name="Footprint">Eros Tracker:S2BPHSM4TBLFSN</field>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/ePH.pdf</field>
+        <field name="Height">6.6</field>
+        <field name="Manufacturer_Name">JST (JAPAN SOLDERLESS TERMINALS)</field>
+        <field name="Manufacturer_Part_Number">S2B-PH-SM4-TB(LF)(SN)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="MP1" name="MP1" type="passive"/>
+        <pin num="MP2" name="MP2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="S8B-PH-SM4-TB_LF__SN_">
+      <description>Conn Shrouded Header (4 Sides) HDR 8 POS 2mm Solder RA Side Entry SMD T/R</description>
+      <docs>https://www.digikey.com/product-detail/en/jst-sales-america-inc/S8B-PH-SM4-TB-LF-SN/455-1755-1-ND/926852</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">S8B-PH-SM4-TB_LF__SN_</field>
+        <field name="Footprint">Eros Tracker:S8BPHSM4TBLFSN</field>
+        <field name="Datasheet">https://www.digikey.com/product-detail/en/jst-sales-america-inc/S8B-PH-SM4-TB-LF-SN/455-1755-1-ND/926852</field>
+        <field name="Height">5.5</field>
+        <field name="Manufacturer_Name">JST (JAPAN SOLDERLESS TERMINALS)</field>
+        <field name="Manufacturer_Part_Number">S8B-PH-SM4-TB(LF)(SN)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="MP1" name="MP1" type="passive"/>
+        <pin num="MP2" name="MP2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Eros Tracker" part="TPS62A01A">
+      <description>1-A High-Efficiency Synchronous Buck Converter</description>
+      <docs>https://www.ti.com/lit/ds/symlink/tps62a02a.pdf</docs>
+      <fields>
+        <field name="Reference">U?</field>
+        <field name="Value">TPS62A01A</field>
+        <field name="Footprint">Eros Tracker:SOT-563</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps62a02a.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="SW" type="output"/>
+        <pin num="3" name="VIN" type="power_in"/>
+        <pin num="4" name="EN" type="input"/>
+        <pin num="5" name="FB" type="power_in"/>
+        <pin num="6" name="PG" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="SolderJumper_2_Open">
+      <description>Solder Jumper, 2-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*Open*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">SolderJumper_2_Open</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Motor" part="Motor_DC">
+      <description>DC Motor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>PinHeader*P2.54mm*</fp>
+        <fp>TerminalBlock*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">Motor_DC</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_SPST">
+      <description>Single Pole Single Throw (SPST) switch</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_SPST</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Diode.kicad_sym</uri>
+    </library>
+    <library logical="Eros Tracker">
+      <uri>C:\Users\trkarl\Documents\Eros\Tracker/Eros Tracker.kicad_sym</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Jumper.kicad_sym</uri>
+    </library>
+    <library logical="Motor">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Motor.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3.3V">
+      <node ref="C6" pin="1" pintype="passive"/>
+    </net>
+    <net code="2" name="+3V3">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="D2" pintype="passive"/>
+      <node ref="Q5" pin="3" pinfunction="D2" pintype="passive"/>
+      <node ref="Q5" pin="6" pinfunction="D1" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="SW2" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="3V3" pintype="power_in"/>
+      <node ref="U3" pin="10" pinfunction="CLKSEL0" pintype="input"/>
+      <node ref="U3" pin="28" pinfunction="VDDIO" pintype="power_in"/>
+      <node ref="U3" pin="3" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="3" name="+BATT">
+      <node ref="D2" pin="3" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="J3" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="M1" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="Q7" pin="6" pinfunction="D1" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="U5" pin="10" pinfunction="VBAT" pintype="unspecified"/>
+      <node ref="U5" pin="9" pinfunction="VBAT" pintype="unspecified"/>
+    </net>
+    <net code="4" name="/Eros Tracker BNO086 IMU/I2C_SCL">
+      <node ref="J3" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="IO7" pintype="bidirectional"/>
+      <node ref="U3" pin="19" pinfunction="H_SCL/SCK/RX" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/Eros Tracker BNO086 IMU/I2C_SDA">
+      <node ref="J3" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="IO8" pintype="bidirectional"/>
+      <node ref="U3" pin="20" pinfunction="H_SDA/H_CIPO/TX" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/Eros Tracker BNO086 IMU/INT">
+      <node ref="U1" pin="4" pinfunction="IO5" pintype="bidirectional"/>
+      <node ref="U3" pin="14" pinfunction="~{H_INT}" pintype="output"/>
+    </net>
+    <net code="7" name="/Eros Tracker BNO086 IMU/~{RESET}">
+      <node ref="J3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="Q5" pin="1" pinfunction="S1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="EN" pintype="input"/>
+      <node ref="U3" pin="11" pinfunction="~{RESET}" pintype="input"/>
+    </net>
+    <net code="8" name="/Eros Tracker Connectors/+EXT_MOTOR">
+      <node ref="D2" pin="1" pintype="passive"/>
+      <node ref="J3" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="Q3" pin="6" pinfunction="D1" pintype="passive"/>
+    </net>
+    <net code="9" name="/Eros Tracker Connectors/INT">
+      <node ref="J3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="IO6" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/Eros Tracker Connectors/POWER_VIN1">
+      <node ref="J4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="Q4" pin="2" pinfunction="S2" pintype="passive"/>
+      <node ref="Q4" pin="6" pinfunction="D1" pintype="passive"/>
+      <node ref="Q6" pin="1" pinfunction="G1" pintype="input"/>
+      <node ref="Q6" pin="3" pinfunction="G2" pintype="input"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="/Eros Tracker Connectors/POWER_VIN2">
+      <node ref="J5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="Q4" pin="1" pinfunction="G1" pintype="input"/>
+      <node ref="Q4" pin="3" pinfunction="G2" pintype="input"/>
+      <node ref="Q6" pin="2" pinfunction="S2" pintype="passive"/>
+      <node ref="Q6" pin="6" pinfunction="D1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="/Eros Tracker Connectors/USB_D+">
+      <node ref="J1" pin="A6" pinfunction="DP1" pintype="bidirectional"/>
+      <node ref="J1" pin="B6" pinfunction="DP2" pintype="bidirectional"/>
+      <node ref="U1" pin="14" pinfunction="IO19" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="/Eros Tracker Connectors/USB_D-">
+      <node ref="J1" pin="A7" pinfunction="DN1" pintype="bidirectional"/>
+      <node ref="J1" pin="B7" pinfunction="DN2" pintype="bidirectional"/>
+      <node ref="U1" pin="13" pinfunction="IO18" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="/Eros Tracker Connectors/VBUS">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="A4/B9" pinfunction="VBUS" pintype="power_in"/>
+      <node ref="J1" pin="B4/A9" pinfunction="VBUS" pintype="power_in"/>
+      <node ref="Q4" pin="4" pinfunction="D2" pintype="passive"/>
+      <node ref="Q6" pin="4" pinfunction="D2" pintype="passive"/>
+      <node ref="Q7" pin="1" pinfunction="G1" pintype="passive"/>
+      <node ref="Q7" pin="4" pinfunction="D2" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U5" pin="1" pinfunction="VDD" pintype="unspecified"/>
+      <node ref="U5" pin="2" pinfunction="VDD" pintype="unspecified"/>
+    </net>
+    <net code="15" name="/Eros Tracker Connectors/VBUS_OUT">
+      <node ref="J8" pin="" pintype="passive"/>
+      <node ref="Q7" pin="2" pinfunction="S2" pintype="passive"/>
+    </net>
+    <net code="16" name="/Eros Tracker Microcontroller/ENABLE_LATCH">
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="IO4" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="/Eros Tracker Microcontroller/TACT_MOTOR0">
+      <node ref="JP1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="Q3" pin="5" pinfunction="G2" pintype="input"/>
+      <node ref="U1" pin="8" pinfunction="IO9" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="/Eros Tracker Microcontroller/TACT_MOTOR1">
+      <node ref="Q3" pin="2" pinfunction="G1" pintype="input"/>
+      <node ref="U1" pin="10" pinfunction="IO10" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="/Eros Tracker Microcontroller/~{BUTTON_INPUT}">
+      <node ref="Q2" pin="5" pinfunction="G2" pintype="input"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="IO3" pintype="bidirectional"/>
+    </net>
+    <net code="20" name="/Eros Tracker Microcontroller/~{LED}">
+      <node ref="Q5" pin="5" pinfunction="G2" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="IO2" pintype="bidirectional"/>
+    </net>
+    <net code="21" name="/Eros Tracker Power &amp; Battery/VIN">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="Q7" pin="5" pinfunction="S1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="VIN" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="EN" pintype="input"/>
+    </net>
+    <net code="22" name="/Eros Tracker Power &amp; Battery/~{BAT_STAT_CHARGING}">
+      <node ref="Q2" pin="6" pinfunction="D1" pintype="passive"/>
+      <node ref="Q5" pin="2" pinfunction="G1" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="STAT1" pintype="unspecified"/>
+    </net>
+    <net code="23" name="/Eros Tracker Power &amp; Battery/~{BAT_STAT_CHRG_DONE}">
+      <node ref="Q7" pin="3" pinfunction="G2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U5" pin="4" pinfunction="STAT2" pintype="unspecified"/>
+    </net>
+    <net code="24" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="J1" pin="A1/B12" pinfunction="GND" pintype="power_out"/>
+      <node ref="J1" pin="B1/A12" pinfunction="GND" pintype="power_out"/>
+      <node ref="J2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J2" pin="MP1" pinfunction="MP1" pintype="passive"/>
+      <node ref="J2" pin="MP2" pinfunction="MP2" pintype="passive"/>
+      <node ref="J3" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="J3" pin="MP1" pinfunction="MP1" pintype="passive"/>
+      <node ref="J3" pin="MP2" pinfunction="MP2" pintype="passive"/>
+      <node ref="J9" pin="" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="S1" pintype="passive"/>
+      <node ref="Q3" pin="1" pinfunction="S1" pintype="passive"/>
+      <node ref="Q3" pin="4" pinfunction="S2" pintype="passive"/>
+      <node ref="Q4" pin="5" pinfunction="S1" pintype="passive"/>
+      <node ref="Q6" pin="5" pinfunction="S1" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="20" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="21" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="22" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="23" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="24" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="25" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="26" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="27" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="28" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="29" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="30" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="31" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="32" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="33" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="34" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="35" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="36" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="37" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="38" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="39" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="17" pinfunction="SA0/H_COPI" pintype="input"/>
+      <node ref="U3" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="25" pinfunction="GNDIO" pintype="power_in"/>
+      <node ref="U5" pin="11" pinfunction="EP" pintype="unspecified"/>
+      <node ref="U5" pin="5" pinfunction="VSS" pintype="unspecified"/>
+      <node ref="U5" pin="7" pinfunction="*TE" pintype="unspecified"/>
+    </net>
+    <net code="25" name="Net-(J1-CC1)">
+      <node ref="J1" pin="A5" pinfunction="CC1" pintype="bidirectional"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(J1-CC2)">
+      <node ref="J1" pin="B5" pinfunction="CC2" pintype="bidirectional"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(LED1-A)">
+      <node ref="LED1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="LED2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="LED3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="Q5" pin="4" pinfunction="S2" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(LED1-K)">
+      <node ref="LED1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(LED2-K)">
+      <node ref="LED2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R22" pin="1" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(LED3-K)">
+      <node ref="LED3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R23" pin="1" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(M1--)">
+      <node ref="D2" pin="2" pintype="passive"/>
+      <node ref="M1" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="D2" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(Q2A-G1)">
+      <node ref="Q2" pin="2" pinfunction="G1" pintype="input"/>
+      <node ref="Q2" pin="4" pinfunction="S2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(U1-IO1)">
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="IO1" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="Net-(U2-FB)">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="FB" pintype="power_in"/>
+    </net>
+    <net code="35" name="Net-(U2-SW)">
+      <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="SW" pintype="output"/>
+    </net>
+    <net code="36" name="Net-(U3-CAP)">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="U3" pin="9" pinfunction="CAP" pintype="passive"/>
+    </net>
+    <net code="37" name="Net-(U3-ENV_SCL)">
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="U3" pin="15" pinfunction="ENV_SCL" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="Net-(U3-ENV_SDA)">
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="U3" pin="16" pinfunction="ENV_SDA" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="Net-(U3-PS0{slash}WAKE)">
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="U3" pin="26" pinfunction="XOUT32" pintype="output"/>
+      <node ref="U3" pin="5" pinfunction="PS1" pintype="input"/>
+      <node ref="U3" pin="6" pinfunction="PS0/WAKE" pintype="input"/>
+    </net>
+    <net code="40" name="Net-(U3-~{BOOTN})">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="~{BOOTN}" pintype="input"/>
+    </net>
+    <net code="41" name="Net-(U5-PROG)">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U5" pin="6" pinfunction="PROG" pintype="unspecified"/>
+    </net>
+    <net code="42" name="Net-(U5-THERM)">
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U5" pin="8" pinfunction="THERM" pintype="unspecified"/>
+    </net>
+    <net code="43" name="unconnected-(J1-SBU1-PadA8)">
+      <node ref="J1" pin="A8" pinfunction="SBU1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(J1-SBU2-PadB8)">
+      <node ref="J1" pin="B8" pinfunction="SBU2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(S1-COM_1-Pad3)">
+      <node ref="S1" pin="3" pinfunction="COM_1" pintype="passive"/>
+    </net>
+    <net code="46" name="unconnected-(S1-COM_2-Pad4)">
+      <node ref="S1" pin="4" pinfunction="COM_2" pintype="passive"/>
+    </net>
+    <net code="47" name="unconnected-(S1-NO_1-Pad1)">
+      <node ref="S1" pin="1" pinfunction="NO_1" pintype="passive"/>
+    </net>
+    <net code="48" name="unconnected-(S1-NO_2-Pad2)">
+      <node ref="S1" pin="2" pinfunction="NO_2" pintype="passive"/>
+    </net>
+    <net code="49" name="unconnected-(U1-IO0-Pad18)">
+      <node ref="U1" pin="18" pinfunction="IO0" pintype="bidirectional"/>
+    </net>
+    <net code="50" name="unconnected-(U1-RXD-Pad11)">
+      <node ref="U1" pin="11" pinfunction="RXD" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(U1-TXD-Pad12)">
+      <node ref="U1" pin="12" pinfunction="TXD" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(U2-PG-Pad6)">
+      <node ref="U2" pin="6" pinfunction="PG" pintype="output"/>
+    </net>
+    <net code="53" name="unconnected-(U3-PIN1-Pad1)">
+      <node ref="U3" pin="1" pinfunction="PIN1" pintype="no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U3-PIN7-Pad7)">
+      <node ref="U3" pin="7" pinfunction="PIN7" pintype="no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U3-PIN8-Pad8)">
+      <node ref="U3" pin="8" pinfunction="PIN8" pintype="no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U3-PIN12-Pad12)">
+      <node ref="U3" pin="12" pinfunction="PIN12" pintype="no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U3-PIN13-Pad13)">
+      <node ref="U3" pin="13" pinfunction="PIN13" pintype="no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U3-PIN21-Pad21)">
+      <node ref="U3" pin="21" pinfunction="PIN21" pintype="no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U3-PIN22-Pad22)">
+      <node ref="U3" pin="22" pinfunction="PIN22" pintype="no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U3-PIN23-Pad23)">
+      <node ref="U3" pin="23" pinfunction="PIN23" pintype="no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U3-PIN24-Pad24)">
+      <node ref="U3" pin="24" pinfunction="PIN24" pintype="no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U3-XIN32-Pad27)">
+      <node ref="U3" pin="27" pinfunction="XIN32" pintype="input+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U3-~{H_CS}-Pad18)">
+      <node ref="U3" pin="18" pinfunction="~{H_CS}" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
