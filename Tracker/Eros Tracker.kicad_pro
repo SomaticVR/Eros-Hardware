@@ -411,7 +411,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "Eros Tracker"
+    ]
   },
   "meta": {
     "filename": "Eros Tracker.kicad_pro",
@@ -518,7 +520,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Eros Tracker.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
