@@ -1,0 +1,57 @@
+{
+    "layout": {
+        "hspace": "4mm",
+        "vspace": "4mm",
+        "hbackbone": "5mm",
+        "rows": "2",
+        "cols": "5",
+        "hbonecut": "False"
+    },
+    "tabs": {
+        "type": "fixed",
+        "vwidth": "4mm",
+        "hwidth": "4mm",
+        "vcount": "2",
+        "hcount": "2"
+    },
+    "cuts": {
+        "type": "vcuts",
+        "clearance": "0.5mm",
+        "layer": "User.1"
+    },
+    "framing": {
+        "type": "frame",
+        "hspace": "3mm",
+        "vspace": "3mm",
+        "mintotalheight": "70mm",
+        "mintotalwidth": "70mm",
+        "maxtotalheight": "400m",
+        "maxtotalwidth": "400m",
+        "fillet": "2mm"
+    },
+    "tooling": {
+        "type": "4hole",
+        "hoffset": "3mm",
+        "voffset": "3mm",
+        "size": "4mm"
+    },
+    "fiducials": {
+        "type": "3fid",
+        "hoffset": "10mm",
+        "voffset": "2.5mm",
+        "coppersize": "3mm",
+        "opening": "1.5mm",
+        "paste": "True"
+    },
+    "text": {
+        "type": "simple",
+        "voffset": "2.50mm",
+        "text": "JLCJLCJLCJLC"
+    },
+    "copperfill": {
+        "type": "hatched"
+    },
+    "page": {
+        "type": "A3"
+    }
+}
