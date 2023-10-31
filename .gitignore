@@ -33,3 +33,7 @@ fp-info-cache
 *.gbrjob
 *.drl
 *.zip
+
+Output/*
+
+*/__pycache__/
