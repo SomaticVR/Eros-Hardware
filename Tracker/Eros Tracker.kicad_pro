@@ -55,7 +55,18 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "hole_clearance|161800000|123497000|744952d5-7067-44db-88cd-f9b18ff52e55|af02e7f6-ad04-4e1b-9a4e-2fb7b7756f9f",
+        "hole_clearance|162100000|123497000|744952d5-7067-44db-88cd-f9b18ff52e55|8a9ca11c-5c8e-427e-afec-ef19e278d338",
+        "hole_clearance|162300000|123497000|744952d5-7067-44db-88cd-f9b18ff52e55|72758406-7c56-46ec-abb4-242841751162",
+        "hole_clearance|167700000|123497000|4d8b02cc-af3b-4aee-8d55-49de4acc99d8|fa0c344b-dea3-466b-9f33-a7f3df4478fc",
+        "hole_clearance|167900000|123497000|4d8b02cc-af3b-4aee-8d55-49de4acc99d8|3c135319-e138-4dc3-a5bf-29835adbb6c9",
+        "hole_clearance|168200000|123497000|4d8b02cc-af3b-4aee-8d55-49de4acc99d8|46df7aa2-9455-4194-be19-6eadf0043746",
+        "silk_edge_clearance|160530000|130000000|6622c4a3-2eee-47b2-83e2-6bbfe2c6dec9|4fcd2992-1018-448f-8bf5-ad94c1dabc2b",
+        "silk_edge_clearance|160530000|130000000|6622c4a3-2eee-47b2-83e2-6bbfe2c6dec9|8234169c-0815-4bf2-8cb8-6cbf6adb2ef0",
+        "silk_edge_clearance|169470000|130000000|6622c4a3-2eee-47b2-83e2-6bbfe2c6dec9|1e177b10-6069-4a9b-91b7-17a5f16e60b5",
+        "silk_edge_clearance|169470000|130000000|6622c4a3-2eee-47b2-83e2-6bbfe2c6dec9|c8be6733-00a1-4221-927a-113a2b503d3a"
+      ],
       "meta": {
         "version": 2
       },
@@ -410,7 +421,9 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
+    "pinned_footprint_libs": [
+      "Eros Tracker"
+    ],
     "pinned_symbol_libs": [
       "Eros Tracker"
     ]
@@ -468,8 +481,8 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.78,
-        "via_diameter": 1.2,
-        "via_drill": 1.0,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
         "wire_width": 6
       },
       {
@@ -550,7 +563,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "empty.kicad_wks",
-    "plot_directory": "",
+    "plot_directory": "./",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
