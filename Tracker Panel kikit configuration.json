@@ -5,6 +5,7 @@
         "hbackbone": "5mm",
         "rows": "2",
         "cols": "5",
+        "vbonecut": "False",
         "hbonecut": "False"
     },
     "tabs": {
@@ -42,11 +43,6 @@
         "coppersize": "3mm",
         "opening": "1.5mm",
         "paste": "True"
-    },
-    "text": {
-        "type": "simple",
-        "voffset": "2.50mm",
-        "text": "JLCJLCJLCJLC"
     },
     "copperfill": {
         "type": "hatched"
