@@ -1,0 +1,6 @@
+The purpose for this file is to create a record of modifications to the designs provided under the OHL. 
+According to section 3.3.b of the licence, licensees should provide a brief entry with a date and the nature of the modification for each design change. 
+For example ‘26 April 2020: AC/DC power converter circuit removed as AC input no longer necessary’.
+Information about the design should be added but never removed from this file.
+
+17 November 2023: Source files publicly released under the CERN-OHL-S v2
