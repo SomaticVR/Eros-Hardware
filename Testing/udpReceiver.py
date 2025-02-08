@@ -116,22 +116,22 @@ class HeartbeatTimer(Timer):
     def run(self):
         while not self.finished.wait(self.interval):
             self.function(*self.args,**self.kwargs)
-heartbeat = 0
+heartbeat = None
 lastPacket = time.time()
 
-def parseMessage(sock, data, addr, ax):
+def parseMessage(sock, data, addr, ax = None):
     global connected
     global heartbeat
     global lastPacket
     # print ("data[3]: %s" % data[3])
     # print(addr)
-    match data[3]:
+    match data[0]:
         case PacketTypes.PACKET_HEARTBEAT:
             print("PACKET_HEARTBEAT")
             # sock.sendto(HeartbeatMessage, addr)
         case PacketTypes.PACKET_HANDSHAKE:
-            print("PACKET_HANDSHAKE")
-            # sock.sendto(HeartbeatMessage, addr)
+            # print("PACKET_HANDSHAKE")
+            sock.sendto(HeartbeatMessage, addr)
 
             sock.sendto(HandshakeMessage, addr)
         case PacketTypes.PACKET_ACCEL:
@@ -141,7 +141,7 @@ def parseMessage(sock, data, addr, ax):
             # print(vector[0])
             accel = vector[1:4]
             sensorNo = vector[4]
-            # print(f"{sensorNo}: {accel}")
+            print(f"{sensorNo}: {accel}")
             #vector = struct.unpack_from('!f', data, 9)
             # print(vector[1])
             #vector = struct.unpack_from('!f', data, 13)
@@ -195,8 +195,8 @@ def parseMessage(sock, data, addr, ax):
             #vector = struct.unpack_from('!f', data, 13)
             # print(vector[2])
 
-            # print(Quaternion(rotation))
-            ax.update_rotation(Quaternion(rotation))
+            print(Quaternion(rotation))
+            # ax.update_rotation(Quaternion(rotation))
 
 
 
@@ -233,10 +233,11 @@ def parseMessage(sock, data, addr, ax):
             print("PACKET_INSPECTION_DATATYPE_FLOAT")
         case _:
             print("unknown message type")
+            print(data)
 
 sock = socket.socket(socket.AF_INET, # Internet
                      socket.SOCK_DGRAM) # UDP
-#sock.bind((UDP_IP, UDP_PORT))
+sock.bind((UDP_IP, UDP_PORT))
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 #sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
 
@@ -248,42 +249,64 @@ print("UDP server up and listening")
 
 
 
-# to run GUI event loop
-plt.ion()
- 
-fig = plt.figure(figsize=(4, 4))
-ax = CubeAxes(fig)
-fig.add_axes(ax)
-ax.draw_cube()
-# plt.show()
-fig.canvas.draw()
+### to run GUI event loop
+##plt.ion()
+## 
+##fig = plt.figure(figsize=(4, 4))
+##ax = CubeAxes(fig)
+##fig.add_axes(ax)
+##ax.draw_cube()
+### plt.show()
+##fig.canvas.draw()
 
 try:
 
-    sock.sendto(HandshakeMessage, ('<broadcast>', UDP_PORT))
+    interfaces = socket.getaddrinfo(host=socket.gethostname(), port=None, family=socket.AF_INET)
+    allips = [ip[-1][0] for ip in interfaces]
+
+    # sock.sendto(HandshakeMessage, ('<broadcast>', UDP_PORT))
     while True:
+        if not connected:
+        #     for ip in allips:
+        #         print(f'sending on {ip}')
+        #         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)  # UDP
+        #         sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+        #         sock.bind((ip,0))
+        #         sock.sendto(HandshakeMessage, ("255.255.255.255", 5005))
+        #         sock.close()
+            sock.sendto(HandshakeMessage, ('<broadcast>', UDP_PORT))
         try:
             data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
-            parseMessage(sock, data, addr, ax)
-            fig.canvas.flush_events()
-            fig.canvas.draw()
+            connected = True
+            parseMessage(sock, data, addr, None)
+            # fig.canvas.flush_events()
+            # fig.canvas.draw()
         except TimeoutError:
             print("connection timed out... retrying...")
-            connected = False;
-            heartbeat.cancel()
+            connected = False
+            if heartbeat is not None:
+                heartbeat.cancel()
+                heartbeat = None
             sock.sendto(HandshakeMessage, ('<broadcast>', UDP_PORT))
         except KeyboardInterrupt:
+            connected = False
             sock.close()
-            heartbeat.cancel()
+            if heartbeat is not None:
+                heartbeat.cancel()
+                heartbeat = None
         #print("received message <%s> : %s" % addr, data)
 
 except KeyboardInterrupt:
     print('ctrl-c pressed. Exiting...')
     sock.close()
-    heartbeat.cancel()
+    if heartbeat is not None:
+        heartbeat.cancel()
+        heartbeat = None
 # If both the above exception class does not match, else part will get executed
 else:
     print('Some other error. Also exiting...')
 
 sock.close()
-heartbeat.cancel()
+if heartbeat is not None:
+    heartbeat.cancel()
+    heartbeat = None

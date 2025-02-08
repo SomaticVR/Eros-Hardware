@@ -5,8 +5,8 @@ import struct
 from quaternion import Quaternion
 # import CubeAxes
 import numpy as np
-# import matplotlib.pyplot as plt
-# from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 import time
 from threading import Timer
@@ -80,7 +80,7 @@ class HeartbeatTimer(Timer):
     def run(self):
         while not self.finished.wait(self.interval):
             self.function(*self.args,**self.kwargs)
-heartbeat = 0
+heartbeat = None
 lastPacket = time.time()
 
 def parseMessage(sock, data, addr, ax):
@@ -232,23 +232,35 @@ try:
             # fig.canvas.flush_events()
             # fig.canvas.draw()
         except TimeoutError:
-            print("connection timed out... assuming that the battery died...")
+            print("connection timed out...")
             connected = False;
-            heartbeat.cancel()
-            break;
-            # sock.sendto(HandshakeMessage, ('<broadcast>', UDP_PORT))
+            if heartbeat is not None:
+                heartbeat.cancel()
+                heartbeat = None
+
+            # break;
+            sock.sendto(HandshakeMessage, ('<broadcast>', UDP_PORT))
         except KeyboardInterrupt:
             sock.close()
-            heartbeat.cancel()
+            if heartbeat is not None:
+                heartbeat.cancel()
+                heartbeat = None
+
         #print("received message <%s> : %s" % addr, data)
 
 except KeyboardInterrupt:
     print('ctrl-c pressed. Exiting...')
     sock.close()
-    heartbeat.cancel()
+    if heartbeat is not None:
+        heartbeat.cancel()
+        heartbeat = None
+
 else:
     print('Some other error. Also exiting...')
 
-print(f'runtime: {time.gmtime() - startTime}s')
+#print(f'runtime: {time.gmtime() - startTime}s')
 sock.close()
-heartbeat.cancel()
+if heartbeat is not None:
+    heartbeat.cancel()
+    heartbeat = None
+

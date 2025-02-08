@@ -3,14 +3,17 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
-        "board_outline_line_width": 0.049999999999999996,
-        "copper_line_width": 0.19999999999999998,
+        "apply_defaults_to_fp_fields": false,
+        "apply_defaults_to_fp_shapes": false,
+        "apply_defaults_to_fp_text": false,
+        "board_outline_line_width": 0.1,
+        "copper_line_width": 0.153,
         "copper_text_italic": false,
-        "copper_text_size_h": 1.5,
-        "copper_text_size_v": 1.5,
-        "copper_text_thickness": 0.3,
+        "copper_text_size_h": 1.0,
+        "copper_text_size_v": 1.0,
+        "copper_text_thickness": 0.15,
         "copper_text_upright": false,
-        "courtyard_line_width": 0.049999999999999996,
+        "courtyard_line_width": 0.05,
         "dimension_precision": 4,
         "dimension_units": 3,
         "dimensions": {
@@ -21,34 +24,40 @@
           "text_position": 0,
           "units_format": 1
         },
-        "fab_line_width": 0.09999999999999999,
+        "fab_line_width": 0.1,
         "fab_text_italic": false,
-        "fab_text_size_h": 1.0,
-        "fab_text_size_v": 1.0,
-        "fab_text_thickness": 0.15,
+        "fab_text_size_h": 0.5,
+        "fab_text_size_v": 0.5,
+        "fab_text_thickness": 0.1,
         "fab_text_upright": false,
-        "other_line_width": 0.09999999999999999,
+        "other_line_width": 0.1,
         "other_text_italic": false,
-        "other_text_size_h": 1.0,
-        "other_text_size_v": 1.0,
-        "other_text_thickness": 0.15,
+        "other_text_size_h": 0.5,
+        "other_text_size_v": 0.5,
+        "other_text_thickness": 0.1,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 1.0,
+          "width": 1.0
         },
-        "silk_line_width": 0.09999999999999999,
+        "silk_line_width": 0.1,
         "silk_text_italic": false,
-        "silk_text_size_h": 1.0,
-        "silk_text_size_v": 1.0,
-        "silk_text_thickness": 0.09999999999999999,
+        "silk_text_size_h": 0.5,
+        "silk_text_size_v": 0.5,
+        "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.05
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -66,9 +75,11 @@
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
+        "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -105,29 +116,28 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.09,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.01,
-        "min_hole_clearance": 0.25,
-        "min_hole_to_hole": 0.25,
-        "min_microvia_diameter": 0.19999999999999998,
-        "min_microvia_drill": 0.09999999999999999,
+        "min_copper_edge_clearance": 0.4,
+        "min_hole_clearance": 0.33,
+        "min_hole_to_hole": 0.0,
+        "min_microvia_diameter": 0.2,
+        "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.7999999999999999,
+        "min_text_height": 0.5,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
-        "min_via_annular_width": 0.09999999999999999,
-        "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "min_track_width": 0.09,
+        "min_via_annular_width": 0.13,
+        "min_via_diameter": 0.25,
+        "solder_mask_clearance": 0.0,
+        "solder_mask_min_width": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
         {
-          "td_allow_use_two_tracks": true,
-          "td_curve_segcount": 5,
-          "td_on_pad_in_zone": false,
           "td_onpadsmd": true,
           "td_onroundshapesonly": false,
           "td_ontrackend": false,
@@ -136,36 +146,91 @@
       ],
       "teardrop_parameters": [
         {
+          "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
           "td_maxlen": 1.0,
+          "td_on_pad_in_zone": false,
           "td_target_name": "td_round_shape",
           "td_width_to_size_filter_ratio": 0.9
         },
         {
+          "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
           "td_maxlen": 1.0,
+          "td_on_pad_in_zone": false,
           "td_target_name": "td_rect_shape",
           "td_width_to_size_filter_ratio": 0.9
         },
         {
+          "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
           "td_maxlen": 1.0,
+          "td_on_pad_in_zone": false,
           "td_target_name": "td_track_end",
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
-      "via_dimensions": [],
+      "track_widths": [
+        0.0,
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "tuning_pattern_settings": {
+        "diff_pair_defaults": {
+          "corner_radius_percentage": 80,
+          "corner_style": 1,
+          "max_amplitude": 1.0,
+          "min_amplitude": 0.2,
+          "single_sided": false,
+          "spacing": 1.0
+        },
+        "diff_pair_skew_defaults": {
+          "corner_radius_percentage": 80,
+          "corner_style": 1,
+          "max_amplitude": 1.0,
+          "min_amplitude": 0.2,
+          "single_sided": false,
+          "spacing": 0.6
+        },
+        "single_track_defaults": {
+          "corner_radius_percentage": 80,
+          "corner_style": 1,
+          "max_amplitude": 1.0,
+          "min_amplitude": 0.2,
+          "single_sided": false,
+          "spacing": 0.6
+        }
+      },
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
+    },
+    "ipc2581": {
+      "dist": "",
+      "distpn": "",
+      "internal_id": "",
+      "mfg": "",
+      "mpn": ""
     },
     "layer_presets": [],
     "viewports": []
@@ -173,6 +238,217 @@
   "boards": [],
   "cvpcb": {
     "equivalence_files": []
+  },
+  "erc": {
+    "erc_exclusions": [],
+    "meta": {
+      "version": 0
+    },
+    "pin_map": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "rule_severities": {
+      "bus_definition_conflict": "error",
+      "bus_entry_needed": "error",
+      "bus_to_bus_conflict": "error",
+      "bus_to_net_conflict": "error",
+      "conflicting_netclasses": "error",
+      "different_unit_footprint": "error",
+      "different_unit_net": "error",
+      "duplicate_reference": "error",
+      "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
+      "extra_units": "error",
+      "global_label_dangling": "warning",
+      "hier_label_mismatch": "error",
+      "label_dangling": "error",
+      "lib_symbol_issues": "warning",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
+      "multiple_net_names": "warning",
+      "net_not_bus_member": "warning",
+      "no_connect_connected": "warning",
+      "no_connect_dangling": "warning",
+      "pin_not_connected": "error",
+      "pin_not_driven": "error",
+      "pin_to_pin": "warning",
+      "power_pin_not_driven": "error",
+      "similar_labels": "warning",
+      "simulation_model_issue": "error",
+      "unannotated": "error",
+      "unit_value_mismatch": "error",
+      "unresolved_variable": "error",
+      "wire_dangling": "error"
+    }
   },
   "libraries": {
     "pinned_footprint_libs": [],
@@ -186,7 +462,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.13,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -196,9 +472,740 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_0-Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_0-Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_0-Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_0-Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_1-Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_1-Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_1-Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_1-Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_2-Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_2-Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_2-Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_2-Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_3-Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_3-Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_3-Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_3-Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_4-Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_4-Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_4-Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_4-Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_5-Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_5-Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_5-Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_5-Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_6-Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_6-Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_6-Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_6-Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_7-Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_7-Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_7-Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_7-Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_8-Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_8-Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_8-Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_8-Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_9-Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_9-Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_9-Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Board_9-Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Component Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Main Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.78,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.13,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
         "wire_width": 6
       }
     ],
@@ -207,22 +1214,3681 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(D5-Pad2)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U2-PG-Pad6)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker BNO086 IMU/I2C_SDA"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Connectors/USB_CC2"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(LED2-K)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(Q2A-G1)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad34)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad17)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(LED1-K)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(FL1-ID-Pad4)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Connectors/USB_D-"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Microcontroller/~{POWER GOOD}"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-PIN23-Pad23)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(D1B-K2-Pad5)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(D2-A)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U3-STAT-Pad4)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(Q4B-G2-Pad3)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Microcontroller/CHRG_INT"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-+4V5"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Connectors/USB_CC1"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-~{H_CS}-Pad18)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-PIN24-Pad24)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Connectors/POWER_VIN1"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U3-TS1)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad32)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(LED1-A)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-PIN8-Pad8)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Microcontroller/MCU_ENABLE"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(J10-Pad1)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U3-PMID)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad33)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U4-~{BOOTN})"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-PIN21-Pad21)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Microcontroller/TACT_MOTOR"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(D1C-A3)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad24)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Microcontroller/BUTTON_INPUT"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Microcontroller/ENABLE_LATCH"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Microcontroller/USB_PD_INT"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U1-RXD0)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-PIN1-Pad1)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Connectors/USB_D+"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad29)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-PIN12-Pad12)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad35)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(J9-Pad1)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U2-FB)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Microcontroller/~{LED}"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U2-SW)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-PIN22-Pad22)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U4-CAP)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Connectors/VBUS_OUT"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U3-BTST)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(FL1-D+_1)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad28)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U4-ENV_SDA)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(D1B-A2-Pad2)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker BNO086 IMU/INT"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad25)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(Q4B-S2-Pad2)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Connectors/POWER_VIN2"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(D1A-A1)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U3-REGN)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U6-VCONN)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U1-TXD0)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad7)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(FL1-D-_1)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U4-ENV_SCL)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Microcontroller/BAT_CHRG_DONE"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1-NC-Pad9)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-PIN13-Pad13)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Connectors/VBUS"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(Q1A-D1)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-Net-(U3-SW)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker Microcontroller/ADC_BATT_V"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker BNO086 IMU/~{RESET}"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-/Eros Tracker BNO086 IMU/I2C_SCL"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-PIN7-Pad7)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-XIN32-Pad27)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(Q4B-D2-Pad4)"
+      },
+      {
+        "netclass": "Board_0-Main Power",
+        "pattern": "Board_0-+BATT"
+      },
+      {
+        "netclass": "Board_0-Component Power",
+        "pattern": "Board_0-GND"
+      },
+      {
+        "netclass": "Board_0-Component Power",
+        "pattern": "Board_0-+3V3"
+      },
+      {
+        "netclass": "Board_0-Main Power",
+        "pattern": "Board_0-VBUS"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(Q1A-D1)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad7)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U4-ENV_SDA)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(LED1-A)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U3-PMID)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(Q4B-D2-Pad4)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-~{H_CS}-Pad18)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U3-SW)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(J9-Pad1)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Connectors/POWER_VIN1"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U4-CAP)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U4-ENV_SCL)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U6-VCONN)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Microcontroller/MCU_ENABLE"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Microcontroller/BUTTON_INPUT"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U1-RXD0)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Connectors/USB_CC1"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-PIN24-Pad24)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U2-PG-Pad6)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker BNO086 IMU/~{RESET}"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(FL1-D-_1)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Connectors/POWER_VIN2"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(D1A-A1)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U1-TXD0)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(D5-Pad2)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(D2-A)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(D1B-A2-Pad2)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad24)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker BNO086 IMU/I2C_SDA"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(FL1-ID-Pad4)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-PIN13-Pad13)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(FL1-D+_1)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-XIN32-Pad27)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad28)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-PIN23-Pad23)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(Q4B-G2-Pad3)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad9)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(Q4B-S2-Pad2)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U3-STAT-Pad4)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad29)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad34)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Connectors/USB_D-"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Microcontroller/~{LED}"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(LED1-K)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Connectors/USB_CC2"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Microcontroller/ADC_BATT_V"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(D1B-K2-Pad5)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-PIN12-Pad12)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-+4V5"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U4-~{BOOTN})"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad17)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Connectors/USB_D+"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Microcontroller/ENABLE_LATCH"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Connectors/VBUS_OUT"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Microcontroller/CHRG_INT"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker BNO086 IMU/I2C_SCL"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad33)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-PIN22-Pad22)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U2-SW)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Microcontroller/USB_PD_INT"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(LED2-K)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad32)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Microcontroller/BAT_CHRG_DONE"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Connectors/VBUS"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad25)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U3-TS1)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(Q2A-G1)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U2-FB)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-PIN8-Pad8)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Microcontroller/~{POWER GOOD}"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(J10-Pad1)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad35)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(D1C-A3)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-PIN21-Pad21)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker BNO086 IMU/INT"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U3-REGN)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-Net-(U3-BTST)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-PIN7-Pad7)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-PIN1-Pad1)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-/Eros Tracker Microcontroller/TACT_MOTOR"
+      },
+      {
+        "netclass": "Board_1-Main Power",
+        "pattern": "Board_1-+BATT"
+      },
+      {
+        "netclass": "Board_1-Component Power",
+        "pattern": "Board_1-GND"
+      },
+      {
+        "netclass": "Board_1-Component Power",
+        "pattern": "Board_1-+3V3"
+      },
+      {
+        "netclass": "Board_1-Main Power",
+        "pattern": "Board_1-VBUS"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-PIN12-Pad12)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad35)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(D1C-A3)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U2-FB)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-XIN32-Pad27)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U4-ENV_SCL)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-PIN13-Pad13)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Connectors/USB_CC2"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(FL1-D+_1)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U3-BTST)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U1-RXD0)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(LED2-K)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(Q2A-G1)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(FL1-ID-Pad4)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U2-PG-Pad6)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U4-ENV_SDA)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(D1B-K2-Pad5)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U2-SW)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-~{H_CS}-Pad18)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad25)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad28)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad9)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad7)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U3-REGN)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad29)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(LED1-A)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U3-TS1)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Connectors/VBUS"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad33)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-PIN24-Pad24)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker BNO086 IMU/I2C_SDA"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-PIN1-Pad1)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker BNO086 IMU/INT"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Microcontroller/USB_PD_INT"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Connectors/VBUS_OUT"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(Q4B-S2-Pad2)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Microcontroller/ENABLE_LATCH"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Microcontroller/ADC_BATT_V"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(J10-Pad1)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-PIN23-Pad23)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(D1A-A1)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad17)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(Q4B-G2-Pad3)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U4-~{BOOTN})"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U3-SW)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Microcontroller/BUTTON_INPUT"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Microcontroller/CHRG_INT"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Connectors/POWER_VIN2"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(D2-A)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(FL1-D-_1)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-PIN8-Pad8)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Microcontroller/BAT_CHRG_DONE"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-+4V5"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-PIN22-Pad22)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Microcontroller/MCU_ENABLE"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(D5-Pad2)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(D1B-A2-Pad2)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Connectors/USB_D-"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(Q4B-D2-Pad4)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(LED1-K)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U3-STAT-Pad4)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Microcontroller/~{LED}"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad34)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U3-PMID)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U4-CAP)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad32)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1-NC-Pad24)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker BNO086 IMU/~{RESET}"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U1-TXD0)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Microcontroller/~{POWER GOOD}"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Microcontroller/TACT_MOTOR"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-PIN21-Pad21)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker BNO086 IMU/I2C_SCL"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Connectors/USB_CC1"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-PIN7-Pad7)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(Q1A-D1)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-Net-(U6-VCONN)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Connectors/USB_D+"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(J9-Pad1)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-/Eros Tracker Connectors/POWER_VIN1"
+      },
+      {
+        "netclass": "Board_2-Main Power",
+        "pattern": "Board_2-+BATT"
+      },
+      {
+        "netclass": "Board_2-Component Power",
+        "pattern": "Board_2-GND"
+      },
+      {
+        "netclass": "Board_2-Component Power",
+        "pattern": "Board_2-+3V3"
+      },
+      {
+        "netclass": "Board_2-Main Power",
+        "pattern": "Board_2-VBUS"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(Q2A-G1)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Connectors/USB_CC2"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Microcontroller/TACT_MOTOR"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad17)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-PIN22-Pad22)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-~{H_CS}-Pad18)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Connectors/VBUS"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(D1C-A3)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U2-PG-Pad6)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U3-STAT-Pad4)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U4-ENV_SDA)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(D1B-A2-Pad2)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-PIN7-Pad7)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-PIN24-Pad24)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(J10-Pad1)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Microcontroller/ADC_BATT_V"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U2-FB)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker BNO086 IMU/INT"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U3-PMID)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U1-TXD0)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U4-CAP)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad35)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad33)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad32)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U2-SW)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Microcontroller/ENABLE_LATCH"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Microcontroller/~{LED}"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Connectors/POWER_VIN1"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad34)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-PIN13-Pad13)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Microcontroller/BAT_CHRG_DONE"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad9)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(D5-Pad2)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Microcontroller/CHRG_INT"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(D1A-A1)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker BNO086 IMU/I2C_SCL"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Connectors/USB_D-"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad25)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-PIN1-Pad1)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-PIN12-Pad12)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(J9-Pad1)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U3-BTST)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad28)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U3-TS1)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(FL1-ID-Pad4)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-XIN32-Pad27)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(Q4B-D2-Pad4)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(LED1-K)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker BNO086 IMU/~{RESET}"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(LED2-K)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(D1B-K2-Pad5)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(LED1-A)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Microcontroller/USB_PD_INT"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Connectors/VBUS_OUT"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Connectors/USB_D+"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U4-~{BOOTN})"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Microcontroller/~{POWER GOOD}"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U4-ENV_SCL)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Connectors/USB_CC1"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Microcontroller/BUTTON_INPUT"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad7)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U3-REGN)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Microcontroller/MCU_ENABLE"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-+4V5"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(Q1A-D1)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U6-VCONN)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-PIN21-Pad21)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U3-SW)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad29)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(FL1-D+_1)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(U1-RXD0)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(Q4B-G2-Pad3)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(D2-A)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(Q4B-S2-Pad2)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-PIN23-Pad23)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-Net-(FL1-D-_1)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U4-PIN8-Pad8)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker Connectors/POWER_VIN2"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-/Eros Tracker BNO086 IMU/I2C_SDA"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1-NC-Pad24)"
+      },
+      {
+        "netclass": "Board_3-Main Power",
+        "pattern": "Board_3-+BATT"
+      },
+      {
+        "netclass": "Board_3-Component Power",
+        "pattern": "Board_3-GND"
+      },
+      {
+        "netclass": "Board_3-Component Power",
+        "pattern": "Board_3-+3V3"
+      },
+      {
+        "netclass": "Board_3-Main Power",
+        "pattern": "Board_3-VBUS"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U3-SW)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Microcontroller/BAT_CHRG_DONE"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Microcontroller/ENABLE_LATCH"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Connectors/USB_D+"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Microcontroller/BUTTON_INPUT"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-PIN7-Pad7)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(D5-Pad2)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U4-ENV_SDA)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad17)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Connectors/VBUS_OUT"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-PIN1-Pad1)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad29)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(D1B-K2-Pad5)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad25)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(D1A-A1)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(FL1-D+_1)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-PIN22-Pad22)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(J10-Pad1)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U1-RXD0)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-+4V5"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U3-TS1)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-XIN32-Pad27)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U3-REGN)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker BNO086 IMU/~{RESET}"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U1-TXD0)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U4-~{BOOTN})"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(D1C-A3)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad7)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Connectors/USB_CC1"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-PIN12-Pad12)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad35)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-PIN23-Pad23)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad32)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad28)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(LED1-K)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(D1B-A2-Pad2)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(FL1-ID-Pad4)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Microcontroller/CHRG_INT"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U4-ENV_SCL)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Connectors/POWER_VIN2"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U2-PG-Pad6)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker BNO086 IMU/I2C_SDA"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(Q4B-D2-Pad4)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker BNO086 IMU/INT"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U2-FB)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Microcontroller/USB_PD_INT"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(FL1-D-_1)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U4-CAP)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad24)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U3-PMID)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U6-VCONN)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(LED1-A)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Microcontroller/MCU_ENABLE"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(Q1A-D1)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(D2-A)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad33)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Microcontroller/~{LED}"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Connectors/USB_CC2"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Microcontroller/TACT_MOTOR"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U2-SW)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker BNO086 IMU/I2C_SCL"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U3-STAT-Pad4)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-PIN8-Pad8)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad9)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Connectors/USB_D-"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(Q4B-S2-Pad2)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(U3-BTST)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(Q4B-G2-Pad3)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-PIN21-Pad21)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(J9-Pad1)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Connectors/VBUS"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-PIN13-Pad13)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(Q2A-G1)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Microcontroller/ADC_BATT_V"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Microcontroller/~{POWER GOOD}"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U1-NC-Pad34)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-~{H_CS}-Pad18)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-/Eros Tracker Connectors/POWER_VIN1"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-unconnected-(U4-PIN24-Pad24)"
+      },
+      {
+        "netclass": "Board_4-Default",
+        "pattern": "Board_4-Net-(LED2-K)"
+      },
+      {
+        "netclass": "Board_4-Main Power",
+        "pattern": "Board_4-+BATT"
+      },
+      {
+        "netclass": "Board_4-Component Power",
+        "pattern": "Board_4-GND"
+      },
+      {
+        "netclass": "Board_4-Component Power",
+        "pattern": "Board_4-+3V3"
+      },
+      {
+        "netclass": "Board_4-Main Power",
+        "pattern": "Board_4-VBUS"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad25)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Microcontroller/ENABLE_LATCH"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-PIN21-Pad21)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad28)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Microcontroller/~{LED}"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad35)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Microcontroller/BUTTON_INPUT"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-PIN22-Pad22)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad9)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U3-REGN)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U6-VCONN)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U2-PG-Pad6)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker BNO086 IMU/~{RESET}"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(D1C-A3)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Microcontroller/ADC_BATT_V"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(D5-Pad2)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(Q1A-D1)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U2-FB)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad7)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(LED1-A)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-PIN12-Pad12)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-PIN7-Pad7)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Connectors/VBUS"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U2-SW)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad29)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(FL1-D+_1)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Microcontroller/TACT_MOTOR"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U3-BTST)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U4-~{BOOTN})"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(LED1-K)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U4-CAP)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad24)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U3-STAT-Pad4)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Microcontroller/CHRG_INT"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(D1B-A2-Pad2)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad32)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-PIN1-Pad1)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Microcontroller/~{POWER GOOD}"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad33)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-PIN8-Pad8)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Connectors/POWER_VIN2"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U3-SW)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(Q4B-D2-Pad4)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(FL1-D-_1)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Connectors/POWER_VIN1"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(D1B-K2-Pad5)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-~{H_CS}-Pad18)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(J10-Pad1)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U4-ENV_SDA)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(D2-A)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker BNO086 IMU/I2C_SDA"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(Q2A-G1)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U1-TXD0)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(Q4B-S2-Pad2)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(J9-Pad1)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-PIN24-Pad24)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Microcontroller/MCU_ENABLE"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U3-TS1)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Connectors/VBUS_OUT"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Connectors/USB_CC1"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Connectors/USB_D+"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker BNO086 IMU/INT"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker BNO086 IMU/I2C_SCL"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(LED2-K)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-PIN23-Pad23)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad34)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-XIN32-Pad27)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Microcontroller/BAT_CHRG_DONE"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U1-RXD0)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U3-PMID)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U1-NC-Pad17)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(U4-PIN13-Pad13)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Connectors/USB_D-"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(D1A-A1)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-+4V5"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(FL1-ID-Pad4)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(Q4B-G2-Pad3)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Microcontroller/USB_PD_INT"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-Net-(U4-ENV_SCL)"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-/Eros Tracker Connectors/USB_CC2"
+      },
+      {
+        "netclass": "Board_5-Default",
+        "pattern": "Board_5-unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_5-Main Power",
+        "pattern": "Board_5-+BATT"
+      },
+      {
+        "netclass": "Board_5-Component Power",
+        "pattern": "Board_5-GND"
+      },
+      {
+        "netclass": "Board_5-Component Power",
+        "pattern": "Board_5-+3V3"
+      },
+      {
+        "netclass": "Board_5-Main Power",
+        "pattern": "Board_5-VBUS"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U1-RXD0)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(D5-Pad2)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Microcontroller/~{POWER GOOD}"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-PIN1-Pad1)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(FL1-ID-Pad4)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker BNO086 IMU/~{RESET}"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(Q4B-D2-Pad4)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-PIN23-Pad23)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(LED1-A)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-+4V5"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Microcontroller/ADC_BATT_V"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad33)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(D1C-A3)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-PIN24-Pad24)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Connectors/POWER_VIN2"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(LED1-K)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-PIN22-Pad22)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(LED2-K)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Microcontroller/TACT_MOTOR"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Connectors/POWER_VIN1"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U6-VCONN)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Microcontroller/~{LED}"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-~{H_CS}-Pad18)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U2-PG-Pad6)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U2-SW)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(D1A-A1)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U4-ENV_SDA)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Connectors/VBUS"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Microcontroller/BUTTON_INPUT"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker BNO086 IMU/I2C_SDA"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-PIN8-Pad8)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-PIN12-Pad12)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(Q4B-G2-Pad3)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U4-~{BOOTN})"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-PIN21-Pad21)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U3-STAT-Pad4)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad34)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Connectors/USB_CC1"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(FL1-D-_1)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Connectors/USB_CC2"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad28)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U3-PMID)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(D1B-A2-Pad2)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-XIN32-Pad27)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(FL1-D+_1)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(Q4B-S2-Pad2)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Microcontroller/MCU_ENABLE"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-PIN7-Pad7)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(Q1A-D1)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U3-SW)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(Q2A-G1)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad7)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(D2-A)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad25)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Microcontroller/CHRG_INT"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker BNO086 IMU/INT"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Microcontroller/BAT_CHRG_DONE"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad17)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U3-REGN)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Connectors/USB_D-"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad35)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(J10-Pad1)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U1-TXD0)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Microcontroller/USB_PD_INT"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(D1B-K2-Pad5)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker BNO086 IMU/I2C_SCL"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad32)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Connectors/VBUS_OUT"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(J9-Pad1)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U3-TS1)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U2-FB)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad29)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U4-ENV_SCL)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad9)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U3-BTST)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad24)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U4-PIN13-Pad13)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Connectors/USB_D+"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-/Eros Tracker Microcontroller/ENABLE_LATCH"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-Net-(U4-CAP)"
+      },
+      {
+        "netclass": "Board_6-Default",
+        "pattern": "Board_6-unconnected-(U1-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_6-Main Power",
+        "pattern": "Board_6-+BATT"
+      },
+      {
+        "netclass": "Board_6-Component Power",
+        "pattern": "Board_6-GND"
+      },
+      {
+        "netclass": "Board_6-Component Power",
+        "pattern": "Board_6-+3V3"
+      },
+      {
+        "netclass": "Board_6-Main Power",
+        "pattern": "Board_6-VBUS"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U2-FB)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U3-SW)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad17)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U3-BTST)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(D5-Pad2)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(D1A-A1)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Connectors/USB_CC1"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad33)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(D1B-A2-Pad2)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Microcontroller/~{LED}"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U2-PG-Pad6)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Microcontroller/MCU_ENABLE"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U4-ENV_SCL)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-+4V5"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad7)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-PIN13-Pad13)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad25)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Microcontroller/ADC_BATT_V"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Microcontroller/BAT_CHRG_DONE"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U3-REGN)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Connectors/USB_CC2"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad28)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Microcontroller/BUTTON_INPUT"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Connectors/VBUS"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U1-TXD0)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(Q2A-G1)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U1-RXD0)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad35)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(Q4B-D2-Pad4)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(LED2-K)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker BNO086 IMU/I2C_SCL"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-PIN23-Pad23)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(J10-Pad1)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad24)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(D2-A)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U2-SW)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-PIN1-Pad1)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(LED1-K)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-XIN32-Pad27)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(Q4B-G2-Pad3)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(FL1-D+_1)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(Q4B-S2-Pad2)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-PIN21-Pad21)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-PIN12-Pad12)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U3-STAT-Pad4)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-~{H_CS}-Pad18)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U3-TS1)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Microcontroller/ENABLE_LATCH"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad34)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(FL1-ID-Pad4)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Microcontroller/~{POWER GOOD}"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(D1C-A3)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Connectors/VBUS_OUT"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Microcontroller/CHRG_INT"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Connectors/USB_D+"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U4-~{BOOTN})"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-PIN24-Pad24)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Connectors/USB_D-"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Connectors/POWER_VIN1"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad32)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker BNO086 IMU/I2C_SDA"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(LED1-A)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U4-CAP)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(Q1A-D1)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad29)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Connectors/POWER_VIN2"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Microcontroller/TACT_MOTOR"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U3-PMID)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-PIN8-Pad8)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(FL1-D-_1)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U6-VCONN)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-PIN22-Pad22)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker BNO086 IMU/~{RESET}"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(D1B-K2-Pad5)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-Net-(U4-ENV_SDA)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U1-NC-Pad9)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker BNO086 IMU/INT"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(J9-Pad1)"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-/Eros Tracker Microcontroller/USB_PD_INT"
+      },
+      {
+        "netclass": "Board_7-Default",
+        "pattern": "Board_7-unconnected-(U4-PIN7-Pad7)"
+      },
+      {
+        "netclass": "Board_7-Main Power",
+        "pattern": "Board_7-+BATT"
+      },
+      {
+        "netclass": "Board_7-Component Power",
+        "pattern": "Board_7-GND"
+      },
+      {
+        "netclass": "Board_7-Component Power",
+        "pattern": "Board_7-+3V3"
+      },
+      {
+        "netclass": "Board_7-Main Power",
+        "pattern": "Board_7-VBUS"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Connectors/POWER_VIN1"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U6-VCONN)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad33)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad17)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(D1B-K2-Pad5)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker BNO086 IMU/I2C_SDA"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(LED2-K)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad29)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U4-CAP)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U4-ENV_SDA)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad28)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Microcontroller/~{LED}"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U4-~{BOOTN})"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker BNO086 IMU/~{RESET}"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Connectors/USB_D+"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Connectors/VBUS_OUT"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad32)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad7)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U3-STAT-Pad4)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-PIN1-Pad1)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(FL1-ID-Pad4)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(J9-Pad1)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-PIN23-Pad23)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U3-SW)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Microcontroller/ENABLE_LATCH"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U3-TS1)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker BNO086 IMU/INT"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(Q4B-D2-Pad4)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U3-REGN)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Microcontroller/TACT_MOTOR"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U3-PMID)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-PIN12-Pad12)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U2-SW)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(LED1-A)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-PIN21-Pad21)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Microcontroller/USB_PD_INT"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker BNO086 IMU/I2C_SCL"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad9)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-PIN22-Pad22)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Microcontroller/ADC_BATT_V"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-PIN24-Pad24)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Connectors/USB_CC2"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(D1A-A1)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U1-RXD0)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Connectors/USB_D-"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(Q4B-S2-Pad2)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Microcontroller/BUTTON_INPUT"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U1-TXD0)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Microcontroller/MCU_ENABLE"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Connectors/USB_CC1"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(D2-A)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U2-FB)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(Q1A-D1)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(D5-Pad2)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Microcontroller/CHRG_INT"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad24)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U3-BTST)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(Q2A-G1)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Connectors/POWER_VIN2"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad35)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(D1B-A2-Pad2)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-~{H_CS}-Pad18)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad25)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U1-NC-Pad34)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Microcontroller/BAT_CHRG_DONE"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U2-PG-Pad6)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(FL1-D+_1)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(FL1-D-_1)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-PIN7-Pad7)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Connectors/VBUS"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-PIN13-Pad13)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-XIN32-Pad27)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(J10-Pad1)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-+4V5"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(U4-PIN8-Pad8)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(LED1-K)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-unconnected-(Q4B-G2-Pad3)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(D1C-A3)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-Net-(U4-ENV_SCL)"
+      },
+      {
+        "netclass": "Board_8-Default",
+        "pattern": "Board_8-/Eros Tracker Microcontroller/~{POWER GOOD}"
+      },
+      {
+        "netclass": "Board_8-Main Power",
+        "pattern": "Board_8-+BATT"
+      },
+      {
+        "netclass": "Board_8-Component Power",
+        "pattern": "Board_8-GND"
+      },
+      {
+        "netclass": "Board_8-Component Power",
+        "pattern": "Board_8-+3V3"
+      },
+      {
+        "netclass": "Board_8-Main Power",
+        "pattern": "Board_8-VBUS"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U2-SW)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(D5-Pad2)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Connectors/POWER_VIN2"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-PIN13-Pad13)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Microcontroller/CHRG_INT"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Microcontroller/BUTTON_INPUT"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Microcontroller/ADC_BATT_V"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad24)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Connectors/USB_CC2"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad28)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U3-BTST)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-~{H_CS}-Pad18)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Microcontroller/TACT_MOTOR"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(J1-SBU2-PadB8)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Connectors/POWER_VIN1"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Microcontroller/~{POWER GOOD}"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-PIN1-Pad1)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U1-TXD0)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker BNO086 IMU/~{RESET}"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Microcontroller/~{LED}"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad25)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(D1C-A3)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad33)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad35)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(D1A-A1)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-+4V5"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Connectors/USB_D-"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad34)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(J9-Pad1)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-PIN24-Pad24)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(Q1A-D1)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Microcontroller/USB_PD_INT"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-PIN21-Pad21)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U4-CAP)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U4-ENV_SCL)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad32)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(Q4B-D2-Pad4)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U3-SW)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U1-RXD0)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-PIN12-Pad12)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Microcontroller/ENABLE_LATCH"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker BNO086 IMU/I2C_SDA"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Connectors/VBUS"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(LED2-K)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(D2-A)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad10)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-PIN22-Pad22)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(FL1-D+_1)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U3-TS1)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(J1-SBU1-PadA8)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(LED1-K)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(FL1-D-_1)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U3-STAT-Pad4)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-XIN32-Pad27)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(FL1-ID-Pad4)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-PIN23-Pad23)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad15)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U3-PMID)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Microcontroller/BAT_CHRG_DONE"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U4-ENV_SDA)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Connectors/USB_D+"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U2-PG-Pad6)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(J10-Pad1)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U2-FB)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker BNO086 IMU/I2C_SCL"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker BNO086 IMU/INT"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U3-REGN)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(Q4B-G2-Pad3)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(Q4B-S2-Pad2)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U4-~{BOOTN})"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-PIN8-Pad8)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(U6-VCONN)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(D1B-A2-Pad2)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U4-PIN7-Pad7)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad17)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Connectors/VBUS_OUT"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(D1B-K2-Pad5)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad9)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad7)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-unconnected-(U1-NC-Pad29)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(LED1-A)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Microcontroller/MCU_ENABLE"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-Net-(Q2A-G1)"
+      },
+      {
+        "netclass": "Board_9-Default",
+        "pattern": "Board_9-/Eros Tracker Connectors/USB_CC1"
+      },
+      {
+        "netclass": "Board_9-Main Power",
+        "pattern": "Board_9-+BATT"
+      },
+      {
+        "netclass": "Board_9-Component Power",
+        "pattern": "Board_9-GND"
+      },
+      {
+        "netclass": "Board_9-Component Power",
+        "pattern": "Board_9-+3V3"
+      },
+      {
+        "netclass": "Board_9-Main Power",
+        "pattern": "Board_9-VBUS"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
       "gencad": "",
       "idf": "",
       "netlist": "",
+      "plot": "Output/",
+      "pos_files": "Output/",
       "specctra_dsn": "",
       "step": "",
+      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
   },
   "schematic": {
+    "annotate_start_num": 0,
+    "bom_export_filename": "",
+    "bom_fmt_presets": [],
+    "bom_fmt_settings": {
+      "field_delimiter": ",",
+      "keep_line_breaks": false,
+      "keep_tabs": false,
+      "name": "CSV",
+      "ref_delimiter": ",",
+      "ref_range_delimiter": "",
+      "string_delimiter": "\""
+    },
+    "bom_presets": [],
+    "bom_settings": {
+      "exclude_dnp": false,
+      "fields_ordered": [
+        {
+          "group_by": false,
+          "label": "Reference",
+          "name": "Reference",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Value",
+          "name": "Value",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet",
+          "name": "Datasheet",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "DNP",
+          "name": "${DNP}",
+          "show": true
+        }
+      ],
+      "filter_string": "",
+      "group_symbols": true,
+      "name": "Grouped By Value",
+      "sort_asc": true,
+      "sort_field": "Reference"
+    },
+    "connection_grid_size": 50.0,
+    "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0,
+      "default_line_thickness": 6.0,
+      "default_text_size": 50.0,
+      "field_names": [],
+      "intersheets_ref_own_page": false,
+      "intersheets_ref_prefix": "",
+      "intersheets_ref_short": false,
+      "intersheets_ref_show": false,
+      "intersheets_ref_suffix": "",
+      "junction_size_choice": 3,
+      "label_size_ratio": 0.375,
+      "operating_point_overlay_i_precision": 3,
+      "operating_point_overlay_i_range": "~A",
+      "operating_point_overlay_v_precision": 3,
+      "operating_point_overlay_v_range": "~V",
+      "overbar_offset_ratio": 1.23,
+      "pin_symbol_size": 25.0,
+      "text_offset_ratio": 0.15
+    },
     "legacy_lib_dir": "",
-    "legacy_lib_list": []
+    "legacy_lib_list": [],
+    "meta": {
+      "version": 1
+    },
+    "net_format_name": "",
+    "page_layout_descr_file": "",
+    "plot_directory": "",
+    "spice_current_sheet_as_root": false,
+    "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
+    "spice_save_all_currents": false,
+    "spice_save_all_dissipations": false,
+    "spice_save_all_voltages": false,
+    "subpart_first_id": 65,
+    "subpart_id_separator": 0
   },
   "sheets": [],
   "text_variables": {}
